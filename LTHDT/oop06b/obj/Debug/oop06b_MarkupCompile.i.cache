@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\linh\documents\visual studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\
 oop06b
 none
 false
 DEBUG;TRACE
-c:\users\linh\documents\visual studio 2013\Projects\oop06b\LTHDT\oop06b\App.xaml
-11151548125
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\App.xaml
+52139537463
 
-9800021596
+23-199597181
 12-1401562060
-MainWindow.xaml;
+Controls\MapCanvas.xaml;Controls\Hexagon.xaml;Controls\Notification.xaml;Controls\PushPin.xaml;MainWindow.xaml;
 
 False
 

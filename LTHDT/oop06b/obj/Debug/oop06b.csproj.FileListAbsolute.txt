@@ -1,1 +1,15 @@
 c:\users\linh\documents\visual studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.exe.config
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.exe
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.pdb
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.csprojResolveAssemblyReference.cache
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\MainWindow.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\MainWindow.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\App.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b_MarkupCompile.cache
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.g.resources
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.Properties.Resources.resources
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.csproj.GenerateResource.Cache
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.exe
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.pdb
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Hexagon.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Hexagon.g.cs
