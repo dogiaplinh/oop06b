@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\App.xaml
-52139537463
+5-760814588
 
-23-199597181
+25-916300195
 12-1401562060
-Controls\MapCanvas.xaml;Controls\Hexagon.xaml;Controls\Notification.xaml;Controls\PushPin.xaml;MainWindow.xaml;
+Controls\MapControl.xaml;Controls\Hexagon.xaml;Controls\Notification.xaml;Controls\PushPin.xaml;MainWindow.xaml;
 
 False
 

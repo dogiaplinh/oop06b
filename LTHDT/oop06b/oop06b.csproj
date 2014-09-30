@@ -53,8 +53,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\MapCanvas.xaml.cs">
-      <DependentUpon>MapCanvas.xaml</DependentUpon>
+    <Compile Include="Controls\MapControl.xaml.cs">
+      <DependentUpon>MapControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Notification.xaml.cs">
       <DependentUpon>Notification.xaml</DependentUpon>
@@ -62,12 +62,14 @@
     <Compile Include="Controls\PushPin.xaml.cs">
       <DependentUpon>PushPin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\NodeTypeToBrushConverter.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ViewModelBase.cs" />
     <Compile Include="Models\Constant.cs" />
     <Compile Include="Models\HeuristicFunction.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Page Include="Controls\MapCanvas.xaml">
+    <Compile Include="ViewModels\MapControlViewModel.cs" />
+    <Page Include="Controls\MapControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace oop06b.Models
 {
     /// <summary>
-    /// Class chứa toàn bộ các hằng số sử dụng trong project
+    /// Class chứa toàn bộ các hằng số và thông số sử dụng trong project
     /// </summary>
-    public class Constant
+    public static class Constant
     {
+        public static double SQRT3 = Math.Sqrt(3);
+        public static double MapHeight = 600;
+        public static double MapWidth = 1000;
     }
 }

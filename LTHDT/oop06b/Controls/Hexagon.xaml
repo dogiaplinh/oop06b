@@ -3,21 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converter="clr-namespace:oop06b.Converters"
              mc:Ignorable="d"
              Width="300"
              Height="300"
              d:DesignHeight="300"
              d:DesignWidth="300">
+    <UserControl.Resources>
+        <converter:NodeTypeToBrushConverter x:Key="NodeTypeToBrushConverter" />
+    </UserControl.Resources>
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Set start"
+                      Click="SetStartClick" />
+            <MenuItem Header="Set goal"
+                      Click="SetGoalClick" />
+        </ContextMenu>
+    </UserControl.ContextMenu>
     <Grid>
-        <Polygon Fill="{Binding Background}"
-                 Stroke="{Binding Stroke}">
+        <Polygon x:Name="polygon"
+                 Fill="{Binding Type, Mode=TwoWay, Converter={StaticResource NodeTypeToBrushConverter}}"
+                 Stroke="Black"
+                 StrokeThickness="2">
             <Polygon.Points>
                 <Point X="0"
                        Y="150" />
                 <Point X="75"
-                       Y="21.1" />
+                       Y="20.1" />
                 <Point X="225"
-                       Y="21.1" />
+                       Y="20.1" />
                 <Point X="300"
                        Y="150" />
                 <Point X="225"
@@ -26,5 +40,14 @@
                        Y="279.9" />
             </Polygon.Points>
         </Polygon>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock FontSize="70">
+                <Run Text="{Binding X}" />
+                <Run Text="," />
+                <Run Text="{Binding Y}" />
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </UserControl>

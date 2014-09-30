@@ -1,9 +1,21 @@
 ﻿<Window x:Class="oop06b.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="clr-namespace:oop06b.Controls"
         Title="MainWindow"
-        Height="480"
-        Width="640">
+        Height="631"
+        Width="1008"
+        ResizeMode="CanMinimize">
+
     <Grid>
+        <Menu VerticalAlignment="Top"
+              VerticalContentAlignment="Top">
+            <MenuItem Header="New map"
+                      Click="MenuItem_Click" />
+            <Button Content="new map" />
+        </Menu>
+        <Grid x:Name="MapLayout">
+            <control:MapControl DataContext="{Binding Map}" />
+        </Grid>
     </Grid>
 </Window>

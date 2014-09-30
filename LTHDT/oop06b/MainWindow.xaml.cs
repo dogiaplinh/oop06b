@@ -1,4 +1,6 @@
-﻿using oop06b.ViewModels;
+﻿using oop06b.Controls;
+using oop06b.Models;
+using oop06b.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,10 @@ namespace oop06b
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

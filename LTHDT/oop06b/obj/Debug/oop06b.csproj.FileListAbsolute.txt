@@ -13,3 +13,11 @@ C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debu
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.pdb
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Hexagon.baml
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Hexagon.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Notification.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\PushPin.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Notification.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\PushPin.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b_MarkupCompile.lref
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\MapControl.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\MapControl.g.cs

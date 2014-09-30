@@ -17,6 +17,7 @@ namespace oop06b.Models
         private PriorityQueue<Node> openSet = new PriorityQueue<Node>();
         private List<Node> closeSet = new List<Node>();
         private Map map;
+        private HeuristicFunction function = new HeuristicFunction();
 
         public AStar(Map map, Node start, Node goal)
         {

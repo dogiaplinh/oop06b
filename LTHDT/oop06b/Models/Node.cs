@@ -1,18 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace oop06b.Models
 {
-    public class Node : IComparer<Node>
+    public class Node : IComparer<Node>, INotifyPropertyChanged
     {
-        public int X { get; set; }
+        private int x;
 
-        public int Y { get; set; }
+        public int X
+        {
+            get { return x; }
+            set { x = value; OnPropertyChanged("X"); }
+        }
 
-        public NodeType Type { get; set; }
+        private int y;
+
+        public int Y
+        {
+            get { return y; }
+            set { y = value; OnPropertyChanged("Y"); }
+        }
+
+        private NodeType type;
+
+        public NodeType Type
+        {
+            get { return type; }
+            set { type = value; OnPropertyChanged("Type"); }
+        }
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public double GScore { get; set; }
 
@@ -24,6 +49,13 @@ namespace oop06b.Models
         {
             throw new NotImplementedException();
         }
+
+        public Node()
+        {
+            Type = NodeType.Normal;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 
     public enum NodeType

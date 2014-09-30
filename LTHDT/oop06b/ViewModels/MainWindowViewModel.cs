@@ -9,5 +9,15 @@ namespace oop06b.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        private MapControlViewModel map = new MapControlViewModel();
+
+        public MapControlViewModel Map
+        {
+            get { return map; }
+            set { map = value; OnPropertyChanged("Map"); }
+        }
+
+        public MainWindowViewModel()
+        { }
     }
 }
