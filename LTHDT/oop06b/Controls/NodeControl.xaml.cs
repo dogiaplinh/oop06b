@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,11 @@ using System.Windows.Shapes;
 namespace Oop06b.Controls
 {
     /// <summary>
-    /// Interaction logic for PushPin.xaml
+    /// Interaction logic for Hexagon.xaml
     /// </summary>
-    public partial class PushPin : UserControl
+    public partial class NodeControl : UserControl
     {
-        public PushPin()
+        public NodeControl()
         {
             InitializeComponent();
         }

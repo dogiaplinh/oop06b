@@ -1,48 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="oop06b.App" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>App.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="oop06b.MainWindow" Collapsed="true">
-    <Position X="4.75" Y="1.5" Width="1.5" />
+  <Class Name="Oop06b.MainWindow" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Controls.Hexagon" Collapsed="true">
-    <Position X="3" Y="1.5" Width="1.5" />
+  <Class Name="Oop06b.Controls.NodeControl" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\Hexagon.xaml.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\NodeControl.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Controls.MapControl" Collapsed="true">
+  <Class Name="Oop06b.Controls.MapControl" Collapsed="true">
     <Position X="8.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAQAAAAAAAAAAAAAACBAAAAAAQAAAACIAAAAA=</HashCode>
+      <HashCode>AAgAAAACQAAAAAAAAAAAAAACBAAAAAAQAAIACIAAAAA=</HashCode>
       <FileName>Controls\MapControl.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Controls.Notification" Collapsed="true">
-    <Position X="4.75" Y="2.5" Width="1.5" />
+  <Class Name="Oop06b.Controls.Notification" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controls\Notification.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Controls.PushPin" Collapsed="true">
+  <Class Name="Oop06b.Controls.PushPin" Collapsed="true">
     <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controls\PushPin.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Helpers.PriorityQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Oop06b.Helpers.PriorityQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAgAAAAAEAAAACAAAAAQAAACBAAAAAABBAABACAA=</HashCode>
@@ -50,7 +43,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="oop06b.Helpers.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="Oop06b.Helpers.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="3" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -58,68 +51,82 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="oop06b.Helpers.ViewModelBase" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="Oop06b.Helpers.ModelBase" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Helpers\ViewModelBase.cs</FileName>
+      <FileName>Helpers\ModelBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="oop06b.Models.AStar" Collapsed="true">
+  <Class Name="Oop06b.Algorithm.AStarAlgorithm" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAEAAAAAAAAgAgAAAABAAAAAAAABAAAAAAAAAAI=</HashCode>
-      <FileName>Models\AStar.cs</FileName>
+      <FileName>Algorithm\AStarAlgorithm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Models.Constant" Collapsed="true">
+  <Class Name="Oop06b.Models.Params" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEBA=</HashCode>
-      <FileName>Models\Constant.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAACAAEBA=</HashCode>
+      <FileName>Models\Params.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Models.HeuristicFunction" Collapsed="true">
+  <Class Name="Oop06b.Models.HeuristicFunction" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\HeuristicFunction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Models.Map" Collapsed="true">
+  <Class Name="Oop06b.Models.Map" Collapsed="true">
     <Position X="6.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAEAAAAAAAAgCAAAAAAAAAAAAAAAAAQAQABAIAA=</HashCode>
+      <HashCode>AQAgAAEAACAAAAAgCAAAAAAAAAAAAAAAAAQAQABAMAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="oop06b.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="5" Y="3.75" Width="1.5" />
+  <Class Name="Oop06b.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAAAAAEAgAADAAAAIQBAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAEAAAADAAAAIQBgAAAAYAA=</HashCode>
       <FileName>Models\Node.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="oop06b.ViewModels.MainWindowViewModel" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Class Name="Oop06b.ViewModels.MainWindowViewModel" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\MainWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="oop06b.Helpers.IPriorityQueue&lt;T&gt;" Collapsed="true">
+  <Class Name="Oop06b.ViewModels.MapControlViewModel" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgEAAAAAAAAAAAAAAAAAABAAAAAAAQQAIAAAAAIAA=</HashCode>
+      <FileName>ViewModels\MapControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oop06b.ViewModels.NodeControlViewModel" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAIAAAADAAAAAIAAAAIAAQEAAAA=</HashCode>
+      <FileName>ViewModels\NodeControlViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Oop06b.Helpers.IPriorityQueue&lt;T&gt;" Collapsed="true">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Helpers\IPriorityQueue.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="oop06b.Models.NodeType" Collapsed="true">
+  <Enum Name="Oop06b.Models.NodeType" Collapsed="true">
     <Position X="3" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AwAAAAAAACAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Node.cs</FileName>
     </TypeIdentifier>
   </Enum>

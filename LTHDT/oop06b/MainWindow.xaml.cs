@@ -1,6 +1,6 @@
-﻿using oop06b.Controls;
-using oop06b.Models;
-using oop06b.ViewModels;
+﻿using Oop06b.Controls;
+using Oop06b.Models;
+using Oop06b.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace oop06b
+namespace Oop06b
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,10 +27,6 @@ namespace oop06b
         {
             InitializeComponent();
             this.DataContext = new MainWindowViewModel();
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

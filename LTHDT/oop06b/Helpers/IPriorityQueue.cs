@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace oop06b.Helpers
+﻿namespace Oop06b.Helpers
 {
     public interface IPriorityQueue<T>
     {

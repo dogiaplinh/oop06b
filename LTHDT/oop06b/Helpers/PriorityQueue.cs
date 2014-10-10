@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace oop06b.Helpers
+namespace Oop06b.Helpers
 {
     public class PriorityQueue<T> : IPriorityQueue<T>
     {
-        private List<T> list = new List<T>();
         private IComparer<T> comparer;
+        private List<T> list = new List<T>();
 
         public PriorityQueue()
         {

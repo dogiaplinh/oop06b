@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Models
 {
     public class HeuristicFunction
     {

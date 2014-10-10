@@ -1,31 +1,45 @@
-﻿using System;
+﻿using Oop06b.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Models
 {
-    public class Node : IComparer<Node>, INotifyPropertyChanged
+    /// <summary>
+    /// Tập các loại của nút
+    /// </summary>
+    public enum NodeType
     {
+        Normal,
+        Start,
+        Goal,
+        Obstacle,
+    }
+
+    /// <summary>
+    /// Class của các nút trong bản đồ
+    /// </summary>
+    public class Node : ModelBase, IComparer<Node>
+    {
+        private NodeType type;
         private int x;
-
-        public int X
-        {
-            get { return x; }
-            set { x = value; OnPropertyChanged("X"); }
-        }
-
         private int y;
 
-        public int Y
+        public Node()
         {
-            get { return y; }
-            set { y = value; OnPropertyChanged("Y"); }
+            Type = NodeType.Normal;
         }
 
-        private NodeType type;
+        public double FScore { get; set; }
+
+        public double GScore { get; set; }
+
+        public List<Node> Neighbors { get; set; }
+
+        public Node Previous { get; set; }
 
         public NodeType Type
         {
@@ -33,35 +47,21 @@ namespace oop06b.Models
             set { type = value; OnPropertyChanged("Type"); }
         }
 
-        private void OnPropertyChanged(string propertyName)
+        public int X
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            get { return x; }
+            set { x = value; OnPropertyChanged("X"); }
         }
 
-        public double GScore { get; set; }
-
-        public double FScore { get; set; }
-
-        public List<Node> Neighbors { get; set; }
+        public int Y
+        {
+            get { return y; }
+            set { y = value; OnPropertyChanged("Y"); }
+        }
 
         public int Compare(Node x, Node y)
         {
             throw new NotImplementedException();
         }
-
-        public Node()
-        {
-            Type = NodeType.Normal;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-    }
-
-    public enum NodeType
-    {
-        Normal,
-        Start,
-        Goal,
     }
 }

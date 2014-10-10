@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Models
 {
     /// <summary>
-    /// Class chứa toàn bộ các hằng số và thông số sử dụng trong project
+    /// Class chứa toàn bộ các thông số sử dụng trong project
     /// </summary>
-    public static class Constant
+    public static class Params
     {
         public static double SQRT3 = Math.Sqrt(3);
         public static double MapHeight = 600;
         public static double MapWidth = 1000;
+        public static double Scale = 0.16;
     }
 }

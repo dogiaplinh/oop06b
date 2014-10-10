@@ -7,7 +7,7 @@
     <ProjectGuid>{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>oop06b</RootNamespace>
+    <RootNamespace>Oop06b</RootNamespace>
     <AssemblyName>oop06b</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -64,16 +64,19 @@
     </Compile>
     <Compile Include="Converters\NodeTypeToBrushConverter.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
-    <Compile Include="Helpers\ViewModelBase.cs" />
-    <Compile Include="Models\Constant.cs" />
+    <Compile Include="Helpers\ModelBase.cs" />
+    <Compile Include="Models\Params.cs" />
     <Compile Include="Models\HeuristicFunction.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MapControlViewModel.cs" />
+    <Compile Include="ViewModels\NodeControlViewModel.cs" />
+    <Compile Include="ViewModels\NotificationViewModel.cs" />
+    <Compile Include="ViewModels\PushPinViewModel.cs" />
     <Page Include="Controls\MapControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\Hexagon.xaml">
+    <Page Include="Controls\NodeControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,8 +96,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\Hexagon.xaml.cs">
-      <DependentUpon>Hexagon.xaml</DependentUpon>
+    <Compile Include="Controls\NodeControl.xaml.cs">
+      <DependentUpon>NodeControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\IPriorityQueue.cs" />
     <Compile Include="Helpers\PriorityQueue.cs" />
@@ -104,7 +107,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\AStar.cs" />
+    <Compile Include="Algorithm\AStarAlgorithm.cs" />
     <Compile Include="Models\Map.cs" />
     <Compile Include="Models\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

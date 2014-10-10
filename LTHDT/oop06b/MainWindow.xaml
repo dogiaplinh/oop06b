@@ -1,21 +1,28 @@
-﻿<Window x:Class="oop06b.MainWindow"
+﻿<Window x:Class="Oop06b.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:control="clr-namespace:oop06b.Controls"
+        xmlns:control="clr-namespace:Oop06b.Controls"
         Title="MainWindow"
-        Height="631"
-        Width="1008"
+        Height="673"
+        Width="1006"
         ResizeMode="CanMinimize">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <Menu VerticalAlignment="Top"
               VerticalContentAlignment="Top">
-            <MenuItem Header="New map"
-                      Click="MenuItem_Click" />
-            <Button Content="new map" />
+            <MenuItem Header="New map" />
         </Menu>
-        <Grid x:Name="MapLayout">
-            <control:MapControl DataContext="{Binding Map}" />
+        <Grid Grid.Row="1"
+              x:Name="MapLayout">
+            <control:MapControl DataContext="{Binding MapControl}" />
         </Grid>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem Content="jsafj" />
+        </StatusBar>
     </Grid>
 </Window>

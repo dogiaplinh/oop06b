@@ -1,16 +1,17 @@
-﻿using oop06b.Helpers;
+﻿using Oop06b.Helpers;
+using Oop06b.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Algorithm
 {
     /// <summary>
     /// Class thuật toán A* đế tìm đường
     /// </summary>
-    public class AStar
+    public class AStarAlgorithm
     {
         private Node start;
         private Node goal;
@@ -19,11 +20,11 @@ namespace oop06b.Models
         private Map map;
         private HeuristicFunction function = new HeuristicFunction();
 
-        public AStar(Map map, Node start, Node goal)
+        public AStarAlgorithm(Map map)
         {
             this.map = map;
-            this.start = start;
-            this.goal = goal;
+            this.start = map.Start;
+            this.goal = map.Goal;
         }
 
         public List<Node> Run()

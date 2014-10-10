@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace oop06b.Helpers
+namespace Oop06b.Helpers
 {
     public class RelayCommand : ICommand
     {
@@ -26,6 +22,8 @@ namespace oop06b.Helpers
             this.canExecute = canExecute;
         }
 
+        public event EventHandler CanExecuteChanged;
+
         public bool CanExecute(object parameter)
         {
             return canExecute == null ? true : canExecute(parameter);
@@ -35,7 +33,5 @@ namespace oop06b.Helpers
         {
             execute(parameter);
         }
-
-        public event EventHandler CanExecuteChanged;
     }
 }
