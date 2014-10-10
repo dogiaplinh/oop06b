@@ -17,16 +17,17 @@ namespace Oop06b.Models
         Start,
         Goal,
         Obstacle,
+        OpenSet,
+        CloseSet,
     }
 
     /// <summary>
     /// Class của các nút trong bản đồ
     /// </summary>
-    public class Node : ModelBase, IComparer<Node>
+    public class Node : ModelBase, IComparer<Node>, IComparable<Node>
     {
         private NodeType type;
-        private int x;
-        private int y;
+        private List<Node> neighbors = new List<Node>();
 
         public Node()
         {
@@ -37,7 +38,10 @@ namespace Oop06b.Models
 
         public double GScore { get; set; }
 
-        public List<Node> Neighbors { get; set; }
+        public List<Node> Neighbors
+        {
+            get { return neighbors; }
+        }
 
         public Node Previous { get; set; }
 
@@ -47,21 +51,33 @@ namespace Oop06b.Models
             set { type = value; OnPropertyChanged("Type"); }
         }
 
-        public int X
-        {
-            get { return x; }
-            set { x = value; OnPropertyChanged("X"); }
-        }
+        public int X { get; set; }
 
-        public int Y
-        {
-            get { return y; }
-            set { y = value; OnPropertyChanged("Y"); }
-        }
+        public int Y { get; set; }
 
         public int Compare(Node x, Node y)
         {
-            throw new NotImplementedException();
+            if (x.X == y.X)
+            {
+                if (x.Y == y.Y)
+                {
+                    return 0;
+                }
+            }
+            return 1;
+        }
+
+        public void Reset()
+        {
+            Type = NodeType.Normal;
+            FScore = 0;
+            GScore = 0;
+            Previous = null;
+        }
+
+        public int CompareTo(Node other)
+        {
+            return Compare(this, other);
         }
     }
 }

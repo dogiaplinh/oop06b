@@ -50,7 +50,7 @@ namespace Oop06b.ViewModels
 
         private void SetView()
         {
-            foreach (var item in map.Nodes)
+            foreach (var item in map)
             {
                 this.Nodes.Add(new NodeControlViewModel(item));
             }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Oop06b.Models
 {
-    public class Map : ModelBase
+    public class Map : ModelBase, IEnumerable<Node>
     {
         private Node goal;
         private List<Node> nodes = new List<Node>();
@@ -34,11 +34,6 @@ namespace Oop06b.Models
                     OnPropertyChanged("Goal");
                 }
             }
-        }
-
-        public List<Node> Nodes
-        {
-            get { return nodes; }
         }
 
         public Node Start
@@ -71,8 +66,21 @@ namespace Oop06b.Models
             }
         }
 
+        public void Clean()
+        {
+            foreach (var item in nodes)
+            {
+                if (item.Type == NodeType.OpenSet || item.Type == NodeType.CloseSet)
+                    item.Reset();
+            }
+        }
+
         public void Clear()
         {
+            foreach (var item in nodes)
+            {
+                item.Reset();
+            }
         }
 
         public void RandomGenerate()
@@ -87,9 +95,48 @@ namespace Oop06b.Models
                 int end = (int)Math.Floor(-i / 2.0 + 6.7);
                 for (int j = start; j <= end; j++)
                 {
-                    Nodes.Add(new Node() { X = i, Y = j });
+                    nodes.Add(new Node() { X = i, Y = j });
                 }
             }
+            Node node;
+            // Add neighbors to each node
+            foreach (var item in nodes)
+            {
+                if ((node = this[item.X - 1, item.Y]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X, item.Y - 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X + 1, item.Y - 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X + 1, item.Y]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X, item.Y + 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X - 1, item.Y + 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+            }
+        }
+
+        public IEnumerator<Node> GetEnumerator()
+        {
+            return nodes.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

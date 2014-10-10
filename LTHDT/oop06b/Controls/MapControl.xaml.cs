@@ -23,14 +23,70 @@ namespace Oop06b.Controls
 
         public MapControl()
         {
+            Instance = this;
             InitializeComponent();
             DataContextChanged += MapControl_DataContextChanged;
         }
+
+        public static MapControl Instance { get; private set; }
 
         public ObservableCollection<NodeControlViewModel> ItemsSource
         {
             get { return (ObservableCollection<NodeControlViewModel>)GetValue(ItemsSourceProperty); }
             set { SetValue(ItemsSourceProperty, value); SetView(); }
+        }
+
+        public void ConnectPath(List<Node> nodes)
+        {
+            int i = 0;
+            Storyboard storyboard = new Storyboard();
+            double xOld = 0, yOld = 0;
+            TimeSpan time = TimeSpan.FromSeconds(0);
+            foreach (var item in nodes)
+            {
+                Line line = new Line()
+                {
+                    X1 = xOld,
+                    Y1 = yOld,
+                    X2 = xOld,
+                    Y2 = yOld,
+                    Stroke = new SolidColorBrush(Colors.Red),
+                    StrokeThickness = 2,
+                };
+                GetLocation(item, out xOld, out yOld);
+                if (line.X1 == 0 && line.Y1 == 0) continue;
+                MainCanvas.Children.Add(line);
+                if (!MainCanvas.Resources.Contains("line" + i.ToString()))
+                    MainCanvas.Resources.Add("line" + i.ToString(), line);
+                else MainCanvas.Resources["line" + i.ToString()] = line;
+                i++;
+                DoubleAnimationUsingKeyFrames animation1 = new DoubleAnimationUsingKeyFrames();
+                EasingDoubleKeyFrame e1 = new EasingDoubleKeyFrame()
+                {
+                    KeyTime = TimeSpan.FromSeconds(0.1),
+                    Value = xOld,
+                };
+                animation1.KeyFrames.Add(e1);
+                DoubleAnimationUsingKeyFrames animation2 = new DoubleAnimationUsingKeyFrames();
+                EasingDoubleKeyFrame e2 = new EasingDoubleKeyFrame()
+                {
+                    KeyTime = TimeSpan.FromSeconds(0.1),
+                    Value = yOld,
+                };
+                animation2.KeyFrames.Add(e2);
+                animation1.BeginTime = animation2.BeginTime = time;
+                Storyboard.SetTargetProperty(animation1, new PropertyPath(Line.X2Property));
+                Storyboard.SetTarget(animation1, line);
+                Storyboard.SetTargetProperty(animation2, new PropertyPath(Line.Y2Property));
+                Storyboard.SetTarget(animation2, line);
+                storyboard.Children.Add(animation1);
+                storyboard.Children.Add(animation2);
+                time = time + TimeSpan.FromSeconds(0.1);
+            }
+            if (!MainCanvas.Resources.Contains("storyboard"))
+                MainCanvas.Resources.Add("storyboard", storyboard);
+            else MainCanvas.Resources["storyboard"] = storyboard;
+            storyboard.Begin();
         }
 
         public void MapControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -45,55 +101,6 @@ namespace Oop06b.Controls
             {
                 map.ItemsSource = (ObservableCollection<NodeControlViewModel>)e.NewValue;
             }
-        }
-
-        private void ConnectPath(List<Node> nodes)
-        {
-            int i = 0;
-            Storyboard storyboard = new Storyboard();
-            double xOld = 0, yOld = 0;
-            TimeSpan time = TimeSpan.FromSeconds(0);
-            foreach (var item in nodes)
-            {
-                Line line = new Line()
-                {
-                    X1 = xOld,
-                    Y1 = yOld,
-                    X2 = xOld,
-                    Y2 = yOld,
-                    Stroke = new SolidColorBrush(Colors.Black),
-                    StrokeThickness = 2,
-                };
-                MainCanvas.Children.Add(line);
-                MainCanvas.Resources.Add("line" + i.ToString(), line);
-                i++;
-                DoubleAnimationUsingKeyFrames animation1 = new DoubleAnimationUsingKeyFrames();
-                EasingDoubleKeyFrame e1 = new EasingDoubleKeyFrame()
-                {
-                    KeyTime = TimeSpan.FromSeconds(0.5),
-                    Value = item.X,
-                };
-                animation1.KeyFrames.Add(e1);
-                DoubleAnimationUsingKeyFrames animation2 = new DoubleAnimationUsingKeyFrames();
-                EasingDoubleKeyFrame e2 = new EasingDoubleKeyFrame()
-                {
-                    KeyTime = TimeSpan.FromSeconds(0.5),
-                    Value = item.Y,
-                };
-                xOld = item.X;
-                yOld = item.Y;
-                animation2.KeyFrames.Add(e2);
-                animation1.BeginTime = animation2.BeginTime = time;
-                Storyboard.SetTargetProperty(animation1, new PropertyPath(Line.X2Property));
-                Storyboard.SetTarget(animation1, line);
-                Storyboard.SetTargetProperty(animation2, new PropertyPath(Line.Y2Property));
-                Storyboard.SetTarget(animation2, line);
-                storyboard.Children.Add(animation1);
-                storyboard.Children.Add(animation2);
-                time = time + TimeSpan.FromSeconds(0.5);
-            }
-            MainCanvas.Resources.Add("storyboard", storyboard);
-            storyboard.Begin();
         }
 
         private void CreateBinding()

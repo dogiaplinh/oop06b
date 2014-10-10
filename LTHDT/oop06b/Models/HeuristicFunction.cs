@@ -8,9 +8,10 @@ namespace Oop06b.Models
 {
     public class HeuristicFunction
     {
-        public double CostEstimate(Node x, Node y)
+        public double CostEstimate(Node a, Node b)
         {
-            throw new NotImplementedException();
+            double h = Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y) + Math.Abs(a.X + a.Y - b.X - b.Y);
+            return h;
         }
     }
 }

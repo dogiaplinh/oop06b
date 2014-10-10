@@ -37,6 +37,11 @@ namespace Oop06b.Helpers
             list.Clear();
         }
 
+        public bool Contains(T item)
+        {
+            return list.Contains(item);
+        }
+
         public T Peek()
         {
             if (list.Count > 0)
