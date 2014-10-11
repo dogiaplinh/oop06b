@@ -18,6 +18,8 @@ namespace Oop06b.Controls
     /// </summary>
     public partial class MapControl : UserControl
     {
+        private List<NodeControl> nodes = new List<NodeControl>();
+
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<NodeControlViewModel>), typeof(MapControl), new PropertyMetadata(new ObservableCollection<NodeControlViewModel>(), OnItemsSourceChanged));
 
@@ -34,6 +36,11 @@ namespace Oop06b.Controls
         {
             get { return (ObservableCollection<NodeControlViewModel>)GetValue(ItemsSourceProperty); }
             set { SetValue(ItemsSourceProperty, value); SetView(); }
+        }
+
+        public void ClearPath()
+        {
+            SetView();
         }
 
         public void ConnectPath(List<Node> nodes)
@@ -113,21 +120,28 @@ namespace Oop06b.Controls
 
         private void GetLocation(Node node, out double x, out double y)
         {
-            x = node.X * 3.0 / 4 * 48 + Params.MapWidth / 2 - 4;
-            y = (node.X * Params.SQRT3 / 2 + node.Y * Params.SQRT3) * 24 + Params.MapHeight / 2 - 4;
+            x = node.X * 225 * Params.Scale + Params.MapWidth / 2;
+            y = (node.X * Params.SQRT3 / 2 + node.Y * Params.SQRT3) * 150 * Params.Scale + Params.MapHeight / 2;
         }
 
         private void SetView()
         {
             MainCanvas.Children.Clear();
-            foreach (var item in ItemsSource)
-            {
-                NodeControl hexagon = new NodeControl();
-                hexagon.DataContext = item;
-                Canvas.SetLeft(hexagon, item.Node.X * 3.0 / 4 * 48 + Params.MapWidth / 2 - 28);
-                Canvas.SetTop(hexagon, (item.Node.X * Params.SQRT3 / 2 + item.Node.Y * Params.SQRT3) * 24 + Params.MapHeight / 2 - 28);
-                MainCanvas.Children.Add(hexagon);
-            }
+            if (nodes.Count == 0)
+                foreach (var item in ItemsSource)
+                {
+                    NodeControl hexagon = new NodeControl();
+                    nodes.Add(hexagon);
+                    hexagon.DataContext = item;
+                    Canvas.SetLeft(hexagon, item.Node.X * 225 * Params.Scale + Params.MapWidth / 2 - 150 * Params.Scale);
+                    Canvas.SetTop(hexagon, (item.Node.X * Params.SQRT3 / 2 + item.Node.Y * Params.SQRT3 - 1) * 150 * Params.Scale + Params.MapHeight / 2);
+                    MainCanvas.Children.Add(hexagon);
+                }
+            else
+                foreach (var item in nodes)
+                {
+                    MainCanvas.Children.Add(item);
+                }
         }
     }
 }

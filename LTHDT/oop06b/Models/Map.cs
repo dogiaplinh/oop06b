@@ -1,4 +1,5 @@
-﻿using Oop06b.Helpers;
+﻿using Oop06b.Controls;
+using Oop06b.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,6 +74,7 @@ namespace Oop06b.Models
                 if (item.Type == NodeType.OpenSet || item.Type == NodeType.CloseSet)
                     item.Reset();
             }
+            MapControl.Instance.ClearPath();
         }
 
         public void Clear()
@@ -81,18 +83,38 @@ namespace Oop06b.Models
             {
                 item.Reset();
             }
+            start = null;
+            goal = null;
+            MapControl.Instance.ClearPath();
         }
 
         public void RandomGenerate()
         {
+            Clear();
+            for (int i = 0; i < nodes.Count / 2; i++)
+            {
+                int a = random.Next(nodes.Count);
+                nodes[a].Type = NodeType.Obstacle;
+            }
+            int b = random.Next(nodes.Count);
+            Start = nodes[b];
+            int c;
+            do
+            {
+                c = random.Next(nodes.Count);
+                if (Start != nodes[c])
+                    Goal = nodes[c];
+            }
+            while (b == c);
         }
 
         private void CreateMap()
         {
-            for (int i = -13; i <= 13; i++)
+            int a = (int)(1000 / Params.Scale / 300 / 2 * 4 / 3) - 1;
+            for (int i = -a; i <= a; i++)
             {
-                int start = (int)Math.Ceiling(-i / 2.0 - 6.7);
-                int end = (int)Math.Floor(-i / 2.0 + 6.7);
+                int start = (int)Math.Ceiling((-Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3) + 1;
+                int end = (int)Math.Floor((Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3) - 1;
                 for (int j = start; j <= end; j++)
                 {
                     nodes.Add(new Node() { X = i, Y = j });

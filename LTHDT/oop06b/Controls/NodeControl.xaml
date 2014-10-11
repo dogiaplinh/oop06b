@@ -28,16 +28,11 @@
                         ScaleX="{Binding Scale}"
                         ScaleY="{Binding Scale}" />
     </UserControl.RenderTransform>
-    <Grid>
-        <i:Interaction.Triggers>
-            <i:EventTrigger EventName="MouseLeftButtonDown">
-                <i:InvokeCommandAction Command="{Binding MouseMoveCommand}" />
-            </i:EventTrigger>
-        </i:Interaction.Triggers>
+    <Grid MouseMove="Grid_MouseMove">
         <Polygon x:Name="polygon"
                  Fill="{Binding Node.Type, Converter={StaticResource NodeTypeToBrushConverter}}"
                  Stroke="Black"
-                 StrokeThickness="2">
+                 StrokeThickness="4">
             <Polygon.Points>
                 <Point X="0"
                        Y="150" />

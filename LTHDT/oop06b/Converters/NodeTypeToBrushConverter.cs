@@ -26,7 +26,7 @@ namespace Oop06b.Converters
                     return new SolidColorBrush(Colors.Green);
 
                 case NodeType.Obstacle:
-                    return new SolidColorBrush(Colors.DarkGray);
+                    return new SolidColorBrush(Colors.Gray);
 
                 case NodeType.OpenSet:
                     return new SolidColorBrush(Colors.Blue);

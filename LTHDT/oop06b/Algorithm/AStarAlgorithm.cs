@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Oop06b.Algorithm
@@ -27,7 +28,7 @@ namespace Oop06b.Algorithm
             this.goal = map.Goal;
         }
 
-        private List<Node> ReconstructPath(Node node)
+        private static List<Node> ReconstructPath(Node node)
         {
             List<Node> list = new List<Node>();
             while (node.Type != NodeType.Start)
@@ -40,8 +41,10 @@ namespace Oop06b.Algorithm
             return list;
         }
 
-        public async Task<List<Node>> Run()
+        public async Task<List<Node>> Run(CancellationToken ct)
         {
+            if (start == null || goal == null)
+                return null;
             Node current = start;
             openSet.Clear();
             closeSet.Clear();
@@ -85,8 +88,19 @@ namespace Oop06b.Algorithm
                             }
                         }
                     }
+                    if (ct.IsCancellationRequested)
+                    {
+                        return null;
+                    }
                 }
-                await Task.Delay(100);
+                try
+                {
+                    await Task.Delay(Params.Delay, ct);
+                }
+                catch (OperationCanceledException)
+                {
+                    return null;
+                }
             }
             return null;
         }
