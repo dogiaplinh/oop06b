@@ -14,8 +14,6 @@ namespace Oop06b.Algorithm
     /// </summary>
     public class AStarAlgorithm
     {
-        private Node start;
-        private Node goal;
         private PriorityQueue<Node> openSet = new PriorityQueue<Node>(Comparer<Node>.Create((x, y) => x.FScore.CompareTo(y.FScore)));
         private List<Node> closeSet = new List<Node>();
         private Map map;
@@ -24,8 +22,6 @@ namespace Oop06b.Algorithm
         public AStarAlgorithm(Map map)
         {
             this.map = map;
-            this.start = map.Start;
-            this.goal = map.Goal;
         }
 
         private static List<Node> ReconstructPath(Node node)
@@ -43,8 +39,10 @@ namespace Oop06b.Algorithm
 
         public async Task<List<Node>> Run(CancellationToken ct)
         {
-            if (start == null || goal == null)
-                return null;
+            if (map.Start == null || map.Goal == null)
+                map.RandomGenerate();
+            var start = map.Start;
+            var goal = map.Goal;
             Node current = start;
             openSet.Clear();
             closeSet.Clear();
@@ -54,6 +52,14 @@ namespace Oop06b.Algorithm
             openSet.Push(current);
             while (openSet.Count > 0)
             {
+                try
+                {
+                    await Task.Delay(Params.Delay, ct);
+                }
+                catch (OperationCanceledException)
+                {
+                    return null;
+                }
                 current = openSet.Pop();
                 if (current == goal)
                 {
@@ -92,14 +98,6 @@ namespace Oop06b.Algorithm
                     {
                         return null;
                     }
-                }
-                try
-                {
-                    await Task.Delay(Params.Delay, ct);
-                }
-                catch (OperationCanceledException)
-                {
-                    return null;
                 }
             }
             return null;

@@ -23,10 +23,19 @@ namespace Oop06b
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel viewmodel;
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowViewModel();
+        }
+
+        private void MapControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Params.MapHeight = MapLayout.ActualHeight;
+            Params.MapWidth = MapLayout.ActualWidth;
+            viewmodel = new MainWindowViewModel();
+            this.DataContext = viewmodel;
         }
     }
 }

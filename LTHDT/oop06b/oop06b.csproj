@@ -66,6 +66,7 @@
     <Compile Include="Controls\PushPin.xaml.cs">
       <DependentUpon>PushPin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\NodeTypeToBooleanConverter.cs" />
     <Compile Include="Converters\NodeTypeToBrushConverter.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ModelBase.cs" />

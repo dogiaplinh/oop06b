@@ -114,7 +114,7 @@ namespace Oop06b.Models
             for (int i = -a; i <= a; i++)
             {
                 int start = (int)Math.Ceiling((-Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3) + 1;
-                int end = (int)Math.Floor((Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3) - 1;
+                int end = (int)Math.Floor((Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3);
                 for (int j = start; j <= end; j++)
                 {
                     nodes.Add(new Node() { X = i, Y = j });

@@ -20,7 +20,7 @@ namespace Oop06b.Converters
                     return new SolidColorBrush(Colors.White);
 
                 case NodeType.Start:
-                    return new SolidColorBrush(Colors.Red);
+                    return new SolidColorBrush(Colors.Orange);
 
                 case NodeType.Goal:
                     return new SolidColorBrush(Colors.Green);

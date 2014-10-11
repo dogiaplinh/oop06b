@@ -1,6 +1,7 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control="clr-namespace:Oop06b.Controls"
+        xmlns:converter="clr-namespace:Oop06b.Converters"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
         x:Class="Oop06b.MainWindow"
@@ -9,6 +10,7 @@
         Width="1006"
         ResizeMode="CanMinimize">
     <Window.Resources>
+        <converter:NodeTypeToBooleanConverter x:Key="NodeTypeToBooleanConverter" />
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -62,26 +64,17 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border x:Name="border"
-                                BorderBrush="Black"
-                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="#FF00AEFF"
                                 SnapsToDevicePixels="true"
                                 Margin="10"
-                                Padding="5">
+                                Padding="5"
+                                Background="White"
+                                CornerRadius="5"
+                                BorderThickness="2">
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="Normal" />
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background)"
-                                                                           Storyboard.TargetName="border">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <SolidColorBrush Color="LightBlue" />
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
+                                    <VisualState x:Name="MouseOver" />
                                     <VisualState x:Name="Pressed" />
                                     <VisualState x:Name="Disabled" />
                                 </VisualStateGroup>
@@ -237,9 +230,10 @@
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
                         <Border x:Name="templateRoot"
                                 SnapsToDevicePixels="true"
-                                Background="{StaticResource ComboBox.Static.Background}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                BorderBrush="{StaticResource ComboBox.Static.Border}">
+                                Background="White"
+                                CornerRadius="5"
+                                BorderThickness="2"
+                                BorderBrush="#FF00AEFF">
                             <Border x:Name="splitBorder"
                                     Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}"
                                     SnapsToDevicePixels="true"
@@ -251,8 +245,9 @@
                                       VerticalAlignment="Center"
                                       Margin="0"
                                       HorizontalAlignment="Center"
-                                      Fill="{StaticResource ComboBox.Static.Glyph}"
-                                      Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z" />
+                                      Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z"
+                                      Fill="#FF00AEFF"
+                                      StrokeThickness="2" />
                             </Border>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -426,9 +421,10 @@
                                                    MaxHeight="{TemplateBinding MaxDropDownHeight}"
                                                    MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
                         <Border x:Name="dropDownBorder"
-                                BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}"
-                                BorderThickness="1"
-                                Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+                                BorderThickness="2"
+                                Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"
+                                CornerRadius="0"
+                                BorderBrush="#FF00AEFF">
                             <ScrollViewer x:Name="DropDownScrollViewer">
                                 <Grid x:Name="grid"
                                       RenderOptions.ClearTypeHint="Enabled">
@@ -453,10 +449,10 @@
                 <ToggleButton x:Name="toggleButton"
                               BorderBrush="{TemplateBinding BorderBrush}"
                               BorderThickness="{TemplateBinding BorderThickness}"
-                              Background="{TemplateBinding Background}"
                               Grid.ColumnSpan="2"
                               IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
-                              Style="{StaticResource ComboBoxToggleButton}" />
+                              Background="White"
+                              Style="{DynamicResource ComboBoxToggleButton}" />
                 <ContentPresenter x:Name="contentPresenter"
                                   ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
                                   ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
@@ -695,7 +691,8 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal"
+                    Background="#FFE0E0E0">
             <Button Content="Reset map"
                     Command="{Binding ResetMapCommand}"
                     Style="{DynamicResource ButtonStyle1}" />
@@ -711,22 +708,24 @@
                 <ComboBoxItem Content="x1 Speed" />
                 <ComboBoxItem Content="x2 Speed" />
                 <ComboBoxItem Content="x4 Speed" />
-                <ComboBoxItem Content="x8 Speed" />
                 <ComboBoxItem Content="x0.5 Speed" />
                 <ComboBoxItem Content="x0.25 Speed" />
             </ComboBox>
         </StackPanel>
         <Grid Grid.Row="1"
               x:Name="MapLayout">
-            <control:MapControl DataContext="{Binding MapControl}" />
+            <control:MapControl DataContext="{Binding MapControl}"
+                                Loaded="MapControl_Loaded" />
         </Grid>
         <StackPanel Grid.Row="2"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    Background="#FFE0E0E0">
             <StackPanel Orientation="Horizontal"
                         Margin="10">
                 <RadioButton Content="Normal"
                              Margin="0,0,10,0" />
-                <RadioButton Content="Obstacle" />
+                <RadioButton Content="Obstacle"
+                             IsChecked="{Binding CurrentNodeType, Mode=TwoWay, Converter={StaticResource NodeTypeToBooleanConverter}}" />
             </StackPanel>
         </StackPanel>
     </Grid>

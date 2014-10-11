@@ -1,4 +1,5 @@
 ﻿using Oop06b.Algorithm;
+using Oop06b.Controls;
 using Oop06b.Helpers;
 using Oop06b.Models;
 using System;
@@ -14,11 +15,50 @@ namespace Oop06b.ViewModels
 {
     public class MainWindowViewModel : ModelBase
     {
+        private CancellationTokenSource cts;
+        private NodeType currentNodeType;
         private Map map;
         private MapControlViewModel mapControl;
-        private CancellationTokenSource cts;
-        private int[] timeDelay = { 200, 100, 50, 25, 400, 800 };
         private int speed;
+        private int[] timeDelay = { 64, 32, 16, 128, 256 };
+
+        public MainWindowViewModel()
+        {
+            map = new Map();
+            MapControl = new MapControlViewModel(map);
+            CurrentNodeType = NodeType.Obstacle;
+            ResetMapCommand = new RelayCommand((param) => ResetMap());
+            FindPathCommand = new RelayCommand((param) => FindPath());
+            RandomMapCommand = new RelayCommand((param) =>
+            {
+                if (cts != null)
+                    cts.Cancel();
+                map.RandomGenerate();
+            });
+        }
+
+        public NodeType CurrentNodeType
+        {
+            get { return currentNodeType; }
+            set
+            {
+                currentNodeType = value;
+                NodeControl.CurrentType = value;
+                OnPropertyChanged("CurrentNodeType");
+            }
+        }
+
+        public ICommand FindPathCommand { get; set; }
+
+        public MapControlViewModel MapControl
+        {
+            get { return mapControl; }
+            set { mapControl = value; OnPropertyChanged("MapControl"); }
+        }
+
+        public ICommand RandomMapCommand { get; set; }
+
+        public ICommand ResetMapCommand { get; set; }
 
         public int Speed
         {
@@ -30,33 +70,6 @@ namespace Oop06b.ViewModels
                 if (speed >= 0)
                     Params.Delay = timeDelay[speed];
             }
-        }
-
-        public MainWindowViewModel()
-        {
-            map = new Map();
-            MapControl = new MapControlViewModel(map);
-            ResetMapCommand = new RelayCommand((param) => ResetMap());
-            FindPathCommand = new RelayCommand((param) => FindPath());
-            RandomMapCommand = new RelayCommand((param) =>
-            {
-                if (cts != null)
-                    cts.Cancel();
-                map.RandomGenerate();
-            });
-        }
-
-        private void ResetMap()
-        {
-            if (cts != null)
-                cts.Cancel();
-            map.Clear();
-        }
-
-        public MapControlViewModel MapControl
-        {
-            get { return mapControl; }
-            set { mapControl = value; OnPropertyChanged("MapControl"); }
         }
 
         private async void FindPath()
@@ -82,10 +95,11 @@ namespace Oop06b.ViewModels
             }
         }
 
-        public ICommand ResetMapCommand { get; set; }
-
-        public ICommand FindPathCommand { get; set; }
-
-        public ICommand RandomMapCommand { get; set; }
+        private void ResetMap()
+        {
+            if (cts != null)
+                cts.Cancel();
+            map.Clear();
+        }
     }
 }

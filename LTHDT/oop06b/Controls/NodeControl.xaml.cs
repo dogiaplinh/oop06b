@@ -1,4 +1,5 @@
-﻿using Oop06b.ViewModels;
+﻿using Oop06b.Models;
+using Oop06b.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,11 +28,15 @@ namespace Oop06b.Controls
             InitializeComponent();
         }
 
+        public static NodeType CurrentType { get; set; }
+
         private void Grid_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                (DataContext as NodeControlViewModel).Node.Type = Models.NodeType.Obstacle;
+                var type = (DataContext as NodeControlViewModel).Node.Type;
+                if (type != NodeType.Start && type != NodeType.Goal)
+                    (DataContext as NodeControlViewModel).Node.Type = CurrentType;
             }
         }
     }

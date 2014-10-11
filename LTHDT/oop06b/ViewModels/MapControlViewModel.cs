@@ -12,7 +12,6 @@ namespace Oop06b.ViewModels
     public class MapControlViewModel : ModelBase
     {
         private Map map;
-
         private ObservableCollection<NodeControlViewModel> nodes = new ObservableCollection<NodeControlViewModel>();
 
         public MapControlViewModel(Map map)
@@ -20,6 +19,13 @@ namespace Oop06b.ViewModels
             Instance = this;
             this.map = map;
             SetView();
+        }
+
+        public static MapControlViewModel Instance { get; private set; }
+
+        public ObservableCollection<NodeControlViewModel> Nodes
+        {
+            get { return nodes; }
         }
 
         public void SetGoal(Node node)
@@ -30,22 +36,6 @@ namespace Oop06b.ViewModels
         public void SetStart(Node node)
         {
             map.Start = node;
-        }
-
-        public static MapControlViewModel Instance { get; private set; }
-
-        public ObservableCollection<NodeControlViewModel> Nodes
-        {
-            get { return nodes; }
-        }
-
-        public void DemoMap()
-        {
-            for (int i = -13; i <= 13; i++)
-            {
-                int start = (int)Math.Ceiling(-i / 2.0 - 6.7);
-                int end = (int)Math.Floor(-i / 2.0 + 6.7);
-            }
         }
 
         private void SetView()

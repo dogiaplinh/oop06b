@@ -14,7 +14,7 @@ namespace Oop06b.Models
         public static double SQRT3 = Math.Sqrt(3);
         public static double MapHeight = 600;
         public static double MapWidth = 1000;
-        public static double Scale = 0.12;
+        public static double Scale = 0.1;
         public static int Delay = 200;
     }
 }
