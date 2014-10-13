@@ -1,0 +1,903 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="edfb148b-e405-44cf-914b-87da1d570a05"
+  name="Converters"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="1cd21b88-f701-434d-90e8-3b14876d4cb1"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOop06b.Converters"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="a2b3eb9c-b13f-41c4-82aa-feda715b4e66"
+        name="NodeTypeToBooleanConverter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ecc4b1b1-2aff-41c5-9e93-4bc80e814f4e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f081313c-734d-4bcb-a751-317460a8ac3a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ba9c2208-47d9-42cf-a04b-028dac81afa2">
+                <propertyInstance
+                  Id="569254a7-7342-4c16-94e6-0eb371f5c227"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="080ce3c9-9ce8-4554-a349-9344357a04bc">
+                <propertyInstance
+                  Id="3cb9aa4c-42b1-458f-bfd6-ba898ff165ae"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8cbf9da-c081-4dbf-b3ad-979aec96b17f">
+                <propertyInstance
+                  Id="5ec8500b-ca74-46c9-8c64-06973bfbb7c4"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="532b939f-47ca-4bf0-b173-22938ba619f8">
+                <propertyInstance
+                  Id="7b5d8953-2a8e-4c87-bdcb-d0184ca84c06"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="efb38b09-8509-49a8-af3d-960fd9ad8f04">
+                <propertyInstance
+                  Id="e623c391-08b5-4a18-983c-edb49b22bec7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c4e8cd68-2027-4476-ac08-858a15bfcde0">
+            <interfaceMoniker
+              Id="4ea30f67-bb31-43bc-8e9b-6685a441e1f3"
+              LastKnownName="IValueConverter"
+              LastKnownLocation="Package2_2204.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e5da46c2-4842-4b17-8fa5-030567d74278"
+            name="NodeTypeToBooleanConverter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7fabebf0-f2ca-489e-836d-3c4837aae2d9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="28810976-9741-4c9c-8c20-51a84795cd86"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e062daf6-1949-4584-bfd6-118c4760e453">
+                    <propertyInstance
+                      Id="118987b4-7bcc-43f0-8312-38ba19594b82"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="469c7856-1136-4760-99a9-a7ee238bfd72">
+                    <propertyInstance
+                      Id="f79c8a27-3350-4553-a307-d93c5b8b0550"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="41cca840-9862-4763-ae53-99c9bbf37cc5">
+                    <propertyInstance
+                      Id="7929a552-56d3-4e2a-bc99-1bb8cead4ed6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea1173a7-d659-4a39-a8da-1e48f335fa76">
+                    <propertyInstance
+                      Id="fbe889f7-b661-44c4-983f-71b473bfe47b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18fcf449-bbc4-4736-be77-b51a802f204b">
+                    <propertyInstance
+                      Id="dfd27917-650a-468a-b97f-52fe74ca5cf2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5732e84-7bfa-42fe-9480-3d5474afa440">
+                    <propertyInstance
+                      Id="36c747b7-de08-4746-a6f7-294a2c81bde6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a7932782-bd36-485f-aef4-e0e940b7d1c4"
+            name="Convert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2621c8b1-9cef-4f33-b491-0983598d3674"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f747b998-e39a-44ce-89ff-aa12171f8f5f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee8fad4d-01e8-4ef8-a9b9-26eb31c581f3">
+                    <propertyInstance
+                      Id="a420695c-504a-4147-880e-f0e61d12cbe7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3acc709-8655-499a-ba76-45df75ecd135">
+                    <propertyInstance
+                      Id="36197071-58ae-4f50-8d52-a802f0df1685"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f92df8b-34da-4088-949a-ece87b382f6f">
+                    <propertyInstance
+                      Id="96df8d1a-69c1-4003-bb49-e82da07e7646"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1051c376-a9a0-4059-9261-4383c59254f7">
+                    <propertyInstance
+                      Id="280df0a6-0203-4cc9-8272-4e403d5bec26"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="705a5f78-dcc1-4cd7-83ae-6788493b70fd">
+                    <propertyInstance
+                      Id="21acce7f-9abf-465d-b8cd-9e42d21f6d6b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4f6807e-8358-49fc-849c-ce8c84ce6f9a">
+                    <propertyInstance
+                      Id="73c4b2a8-1ad4-46bb-af09-b5ba4e38dbf1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9264547c-260d-4c91-ab86-9e977f17776c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0906c555-d008-4abf-9d4a-415c862746fc"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="cdbcc050-f8e2-4d8c-9ced-615c19c5fac8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="13de7d4f-e916-46e0-b647-bc619cf100c3"
+                  name="targetType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6f11f331-daf2-42b6-93bb-196889b744b4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DtargetType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="45c1b131-6004-4a24-a503-fb853eb17f45"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="18d333e0-9511-487d-9348-5900beda66e1"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="271470da-b550-474a-b0aa-b57ffda8fd65"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="290f1703-dcf8-490a-b049-a15f489312a1"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ef93f21a-d4d7-4dc3-9e38-9cc8f58a833f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ea915d9-b11c-410b-ac2e-659353577ca9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package1_2204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7bdcac67-5a35-49a5-8ab8-dd90c418388f"
+            name="ConvertBack"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8f5051af-2e7c-49fd-b2ad-d33ff057e3ad"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="120314a1-4745-4724-b3d9-85acf9e9b192"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab565a36-2087-4744-b65b-c07c27bdb8ee">
+                    <propertyInstance
+                      Id="268f3131-ad2b-48c2-8da5-8302a699a05a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3de72a19-a52c-45b0-89c7-6b10f69e1f55">
+                    <propertyInstance
+                      Id="3537e19f-c838-4282-9cab-547bb7eb9ec2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4fae639-f296-4b2a-9098-a9929b47033f">
+                    <propertyInstance
+                      Id="ec2939f2-f1f0-4b88-af6a-36895ff39403"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d86ee92d-dbbe-4f7a-afe7-7a16c5729655">
+                    <propertyInstance
+                      Id="838bf57d-b653-4020-bd27-670533baca2a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85b41b34-d349-4d39-84e3-316d3947c0fb">
+                    <propertyInstance
+                      Id="d5054b31-b980-4e4f-afb4-02c1699eff24"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b25853dd-3450-483b-8907-de7f0d5732f4">
+                    <propertyInstance
+                      Id="682af785-3676-41d7-9a3d-ab2cdaab892c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6fe06ab6-a559-4de9-8287-b7a0be9e2357"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="356e555d-4d41-4ccd-89ae-7995df00314b"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8c0f61c2-52f1-4618-9f0d-2869cfe6d723"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43028245-15fd-4226-8dac-b1318e4881aa"
+                  name="targetType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4b2c7eea-05e7-42d0-bd04-7723f6925c9a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DtargetType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="45c1b131-6004-4a24-a503-fb853eb17f45"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b068375b-7d16-4aa6-be4d-4887cb023da6"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b1314e59-5c00-483b-a416-8c7254124603"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="934b2342-959f-4b9a-860f-5bc69148b04e"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="51c1983a-c37e-43ea-a69d-dbf831b2b445"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBooleanConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ea915d9-b11c-410b-ac2e-659353577ca9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package1_2204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="362eb339-8a69-440a-810d-df06a88ca755"
+        name="NodeTypeToBrushConverter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="eec215d9-6653-402a-856a-852e511b95bf"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="629677c3-196c-4d4a-9da7-afd969552d69"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2c9cb86-e37a-47bb-bbbe-dfa4a0714dae">
+                <propertyInstance
+                  Id="e0dd69ce-81df-466e-b490-762c3068c333"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f8bb5bd-b4f4-4315-a818-24a3e091f808">
+                <propertyInstance
+                  Id="4a753e0b-942d-4d71-8bef-671e1210d645"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab7b6ac5-5b74-4cbe-ab15-bbdfe008de6d">
+                <propertyInstance
+                  Id="a9bce60c-e3b5-464c-8215-ed97745da889"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01321c18-31d9-43ad-a982-766ef2ca5693">
+                <propertyInstance
+                  Id="db827bb5-1100-4b4f-be72-5d8f962f62f0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="57897029-0611-4059-b1c9-9f8c98522457">
+                <propertyInstance
+                  Id="a3bf8ba0-8005-4467-8988-8bd45604c204"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="59911a4d-be10-497a-9efb-3759ebce21af">
+            <interfaceMoniker
+              Id="4ea30f67-bb31-43bc-8e9b-6685a441e1f3"
+              LastKnownName="IValueConverter"
+              LastKnownLocation="Package2_2204.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2054fbd9-0bf8-4d10-9bb6-f07cb9d5c4f2"
+            name="NodeTypeToBrushConverter"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="dfd7401c-6ab6-4978-b4a7-e34dc3e2875a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="25129d6c-a12a-4ce9-898c-df8fc61103ac"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d2309f5-d11d-48e5-9739-c055d28dc56d">
+                    <propertyInstance
+                      Id="3040cbda-3ecc-4941-9e89-b0f06b401d8f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fecc6967-0f7e-448a-8793-b4929459021b">
+                    <propertyInstance
+                      Id="5fddd2f6-5fa9-4384-b2e4-3d1b43012a08"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="095bf721-638f-4042-b8ca-1077514b56c6">
+                    <propertyInstance
+                      Id="0f90b459-c105-425c-ba84-fd186496e6eb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f285b66b-12ab-4c88-b70a-36ce870f6cc3">
+                    <propertyInstance
+                      Id="6f0c217c-900b-4fba-84e6-61a3d3004e5e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7c986b0e-c9aa-4946-bc56-0ae84663afc1">
+                    <propertyInstance
+                      Id="3cf31c40-97b2-4fd7-8ee7-10f6c72b783f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5393b515-d7f0-45ee-af8d-ffefdcb39345">
+                    <propertyInstance
+                      Id="962ab71d-c0dd-40c2-abc4-8bf017327b26"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="1f010704-a94f-414a-aaf0-1618618f468c"
+            name="Convert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ae4f2466-37a3-40d8-a770-5b37b0617c07"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="33d236c6-be52-482f-a977-b9b25257fb4b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09763719-81bf-40f3-b7dd-88ab57890420">
+                    <propertyInstance
+                      Id="e65827b3-a426-424d-8cec-4acb67c282e3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="181808a6-1352-4cff-bb4e-7f7569ebf063">
+                    <propertyInstance
+                      Id="ad8f3bb3-54ab-4230-8e38-19acf4188ce5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31b3501c-4865-4cd1-a3c2-23f7fd1a33ae">
+                    <propertyInstance
+                      Id="196731fd-f655-49e8-a6bc-e2fa74b62a87"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="553119d2-e2e9-4ac8-9e79-aa6fbec73567">
+                    <propertyInstance
+                      Id="c073ab9a-115d-4d22-b47e-3baa5b679272"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ca97481-844d-4dc4-add4-7f8fc1c1137b">
+                    <propertyInstance
+                      Id="523b6b41-4a64-46ac-a9f3-f40b7b6186e9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afc1a799-4b17-4801-845a-c0056f798b0d">
+                    <propertyInstance
+                      Id="b8a150ee-f3ad-42fd-aef0-11004001e128"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="51848af8-4c74-4aa8-8b1c-2ce7b7c92417"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4e00b5e6-3e02-4fe1-8b78-8095324f04b7"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="79af8d50-fa5a-4b8f-b26a-016f5ab253d3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17cebee6-8785-4149-ae48-755d3acb061f"
+                  name="targetType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fd59bcbe-7cbd-4c4e-8c21-b4ff10abe06a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DtargetType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="45c1b131-6004-4a24-a503-fb853eb17f45"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d354ba34-1a34-4a59-9a9d-699668bc629c"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2eb81632-6556-46cd-9173-85d381c55696"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6c82669-2a74-4c42-877f-748c1b8dcdb3"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9b605082-9689-46a9-9f57-33523f70c92e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvert OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ea915d9-b11c-410b-ac2e-659353577ca9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package1_2204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="70812e1f-306e-492f-852b-7450e2081361"
+            name="ConvertBack"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="754bbd67-3586-4815-9ce1-7aae1324dd45"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="be4260ac-4cf1-4d1f-8f86-6259f6bfc0d2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9e3a3b9-c83b-482a-a127-c1c956f04ae8">
+                    <propertyInstance
+                      Id="ba6ceb8c-7d5f-4692-8789-36a0626cc528"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfc7b73e-4cbc-47fd-ab4b-77047f54d7d8">
+                    <propertyInstance
+                      Id="39e14160-44ac-4c36-ab38-2b755ba1d03b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f42da314-7f00-4f6a-8feb-b076746ce53d">
+                    <propertyInstance
+                      Id="6cccaa82-62a1-4605-aef5-e5de6ec6d07b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="780ab468-cac2-449e-9ad7-a3cbaee0071b">
+                    <propertyInstance
+                      Id="f5ac7178-c37b-4df4-8990-1cf85b12689e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f79c44c4-ae9b-44ec-8259-d11063668dc0">
+                    <propertyInstance
+                      Id="4f2c8f02-60df-4304-8077-7220f6e99ebf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ad65a39-47ec-423b-ac29-a84e7b054dad">
+                    <propertyInstance
+                      Id="ed5f7e66-6cc5-4d78-b1ea-7f6e3e1b9cad"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4af9f28b-24f1-4a6f-96ab-a31d58800ba1"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="95d74860-aa27-43e6-8b57-281c85b54c44"
+                  name="value"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7f6a0a14-ef63-4a14-b7c4-1e7befd1f7eb"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dvalue"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c62cfc0a-4d99-4538-9418-c6126871d268"
+                  name="targetType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0e1a3ddf-c666-48d1-be8b-b22c959245c2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3DtargetType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="45c1b131-6004-4a24-a503-fb853eb17f45"
+                      LastKnownName="Type"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9247afa0-4922-4e15-8834-f05d5797b004"
+                  name="parameter"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="74d63c60-fec2-4f97-aa8d-b81232b951a0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dparameter"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d5cd1b06-05ed-43b3-a62d-4cd6a460127e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1707.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0dd06497-9b68-4734-beeb-d31223c30b81"
+                  name="culture"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c5facbc6-26b2-4e17-b424-9b105fabed92"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLinh%2FDocuments%2FVisual Studio 2013%2FProjects%2Foop06b%2FLTHDT%2Foop06b%2Fbin%2FDebug%2Foop06b.exe&quot; Namespace%3DOop06b.Converters Type%3DNodeTypeToBrushConverter Member%3D(Name%3DConvertBack OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Globalization Type%3DCultureInfo)]) ParameterIdentifier%3Dculture"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="3ea915d9-b11c-410b-ac2e-659353577ca9"
+                      LastKnownName="CultureInfo"
+                      LastKnownLocation="Package1_2204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

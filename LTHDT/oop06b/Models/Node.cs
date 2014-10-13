@@ -24,10 +24,10 @@ namespace Oop06b.Models
     /// <summary>
     /// Class của các nút trong bản đồ
     /// </summary>
-    public class Node : ModelBase, IComparer<Node>, IComparable<Node>
+    public class Node : ModelBase, IComparer<Node>
     {
-        private NodeType type;
         private List<Node> neighbors = new List<Node>();
+        private NodeType type;
 
         public Node()
         {
@@ -73,11 +73,6 @@ namespace Oop06b.Models
             FScore = 0;
             GScore = 0;
             Previous = null;
-        }
-
-        public int CompareTo(Node other)
-        {
-            return Compare(this, other);
         }
     }
 }

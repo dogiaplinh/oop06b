@@ -19,13 +19,12 @@ namespace Oop06b.ViewModels
             this.node = node;
             SetStartCommand = new RelayCommand((param) => this.SetStart());
             SetGoalCommand = new RelayCommand((param) => this.SetGoal());
-            MouseMoveCommand = new RelayCommand((param) => MouseMove(param));
+            MouseMoveCommand = new RelayCommand((param) => MouseMove());
         }
 
-        private void MouseMove(object obj)
-        {
-            Node.Type = NodeType.Obstacle;
-        }
+        public static NodeType CurrentType { get; set; }
+
+        public ICommand MouseMoveCommand { get; set; }
 
         public Node Node
         {
@@ -42,7 +41,10 @@ namespace Oop06b.ViewModels
 
         public ICommand SetStartCommand { get; set; }
 
-        public ICommand MouseMoveCommand { get; set; }
+        private void MouseMove()
+        {
+            Node.Type = CurrentType;
+        }
 
         private void SetGoal()
         {

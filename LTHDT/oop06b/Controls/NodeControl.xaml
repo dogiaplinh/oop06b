@@ -29,8 +29,7 @@
                         ScaleY="{Binding Scale}" />
     </UserControl.RenderTransform>
     <Grid MouseMove="Grid_MouseMove">
-        <Polygon x:Name="polygon"
-                 Fill="{Binding Node.Type, Converter={StaticResource NodeTypeToBrushConverter}}"
+        <Polygon Fill="{Binding Node.Type, Converter={StaticResource NodeTypeToBrushConverter}}"
                  Stroke="Black"
                  StrokeThickness="4">
             <Polygon.Points>

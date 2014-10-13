@@ -71,7 +71,7 @@
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
     <Compile Include="Models\Params.cs" />
-    <Compile Include="Models\HeuristicFunction.cs" />
+    <Compile Include="Algorithm\HeuristicFunction.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\MapControlViewModel.cs" />
     <Compile Include="ViewModels\NodeControlViewModel.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Controls\NodeControl.xaml.cs">
       <DependentUpon>NodeControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\IPriorityQueue.cs" />
     <Compile Include="Helpers\PriorityQueue.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

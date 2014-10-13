@@ -28,15 +28,12 @@ namespace Oop06b.Controls
             InitializeComponent();
         }
 
-        public static NodeType CurrentType { get; set; }
-
         private void Grid_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                var type = (DataContext as NodeControlViewModel).Node.Type;
-                if (type != NodeType.Start && type != NodeType.Goal)
-                    (DataContext as NodeControlViewModel).Node.Type = CurrentType;
+                var viewmodel = DataContext as NodeControlViewModel;
+                viewmodel.MouseMoveCommand.Execute(null);
             }
         }
     }

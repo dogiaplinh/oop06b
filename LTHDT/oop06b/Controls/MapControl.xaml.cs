@@ -18,6 +18,7 @@ namespace Oop06b.Controls
     /// </summary>
     public partial class MapControl : UserControl
     {
+        private double timeDelay = 0.2;
         private List<NodeControl> nodes = new List<NodeControl>();
 
         public static readonly DependencyProperty ItemsSourceProperty =
@@ -45,11 +46,20 @@ namespace Oop06b.Controls
 
         public void ConnectPath(List<Node> nodes)
         {
+            List<PushPinViewModel> list = new List<PushPinViewModel>();
+            double center = -200 * Params.Scale / (1 - Params.Scale * 4);
+            var scaleTransform = new ScaleTransform()
+            {
+                CenterX = center,
+                CenterY = center * 2,
+                ScaleX = Params.Scale * 4,
+                ScaleY = Params.Scale * 4,
+            };
             int i = 0;
             Storyboard storyboard = new Storyboard();
             double xOld = 0, yOld = 0;
             TimeSpan time = TimeSpan.FromSeconds(0);
-            foreach (var item in nodes)
+            foreach (var node in nodes)
             {
                 Line line = new Line()
                 {
@@ -60,24 +70,30 @@ namespace Oop06b.Controls
                     Stroke = new SolidColorBrush(Colors.Red),
                     StrokeThickness = 2,
                 };
-                GetLocation(item, out xOld, out yOld);
-                if (line.X1 == 0 && line.Y1 == 0) continue;
+                GetLocation(node, out xOld, out yOld);
+                if (node.Type == NodeType.Start)
+                {
+                    // Add pushpin
+                    AddPushpin(scaleTransform, storyboard, xOld, yOld, time);
+                    i++;
+                    time += TimeSpan.FromSeconds(timeDelay);
+                    continue;
+                }
                 MainCanvas.Children.Add(line);
                 if (!MainCanvas.Resources.Contains("line" + i.ToString()))
                     MainCanvas.Resources.Add("line" + i.ToString(), line);
                 else MainCanvas.Resources["line" + i.ToString()] = line;
-                i++;
                 DoubleAnimationUsingKeyFrames animation1 = new DoubleAnimationUsingKeyFrames();
                 EasingDoubleKeyFrame e1 = new EasingDoubleKeyFrame()
                 {
-                    KeyTime = TimeSpan.FromSeconds(0.1),
+                    KeyTime = TimeSpan.FromSeconds(timeDelay),
                     Value = xOld,
                 };
                 animation1.KeyFrames.Add(e1);
                 DoubleAnimationUsingKeyFrames animation2 = new DoubleAnimationUsingKeyFrames();
                 EasingDoubleKeyFrame e2 = new EasingDoubleKeyFrame()
                 {
-                    KeyTime = TimeSpan.FromSeconds(0.1),
+                    KeyTime = TimeSpan.FromSeconds(timeDelay),
                     Value = yOld,
                 };
                 animation2.KeyFrames.Add(e2);
@@ -88,7 +104,12 @@ namespace Oop06b.Controls
                 Storyboard.SetTarget(animation2, line);
                 storyboard.Children.Add(animation1);
                 storyboard.Children.Add(animation2);
-                time = time + TimeSpan.FromSeconds(0.1);
+                time = time + TimeSpan.FromSeconds(timeDelay);
+                i++;
+                if (node.Type == NodeType.Goal)
+                {
+                    AddPushpin(scaleTransform, storyboard, xOld, yOld, time);
+                }
             }
             if (!MainCanvas.Resources.Contains("storyboard"))
                 MainCanvas.Resources.Add("storyboard", storyboard);
@@ -96,7 +117,35 @@ namespace Oop06b.Controls
             storyboard.Begin();
         }
 
-        public void MapControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void AddPushpin(ScaleTransform scaleTransform, Storyboard storyboard, double x, double y, TimeSpan beginTime)
+        {
+            var p = new PushPin();
+            p.RenderTransform = scaleTransform;
+            Canvas.SetLeft(p, x);
+            Canvas.SetTop(p, y);
+            MainCanvas.Children.Add(p);
+            if (!MainCanvas.Resources.Contains("pin"))
+                MainCanvas.Resources.Add("pin", p);
+            else MainCanvas.Resources["pin"] = p;
+            var animation3 = new BooleanAnimationUsingKeyFrames();
+            var e3 = new DiscreteBooleanKeyFrame()
+            {
+                KeyTime = beginTime,
+                Value = false,
+            };
+            var e4 = new DiscreteBooleanKeyFrame()
+            {
+                KeyTime = beginTime + TimeSpan.FromSeconds(timeDelay),
+                Value = true,
+            };
+            animation3.KeyFrames.Add(e3);
+            animation3.KeyFrames.Add(e4);
+            Storyboard.SetTargetProperty(animation3, new PropertyPath(PushPin.IsOpenProperty));
+            Storyboard.SetTarget(animation3, p);
+            storyboard.Children.Add(animation3);
+        }
+
+        private void MapControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             CreateBinding();
         }
@@ -118,7 +167,7 @@ namespace Oop06b.Controls
             BindingOperations.SetBinding(this, ItemsSourceProperty, binding);
         }
 
-        private void GetLocation(Node node, out double x, out double y)
+        private static void GetLocation(Node node, out double x, out double y)
         {
             x = node.X * 225 * Params.Scale + Params.MapWidth / 2;
             y = (node.X * Params.SQRT3 / 2 + node.Y * Params.SQRT3) * 150 * Params.Scale + Params.MapHeight / 2;

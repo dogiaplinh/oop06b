@@ -2,7 +2,7 @@
 
 namespace Oop06b.Helpers
 {
-    public class PriorityQueue<T> : IPriorityQueue<T>
+    public class PriorityQueue<T>
     {
         private IComparer<T> comparer;
         private List<T> list = new List<T>();

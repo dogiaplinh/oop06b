@@ -2,8 +2,6 @@
 using Oop06b.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,7 +15,6 @@ namespace Oop06b.Algorithm
         private PriorityQueue<Node> openSet = new PriorityQueue<Node>(Comparer<Node>.Create((x, y) => x.FScore.CompareTo(y.FScore)));
         private List<Node> closeSet = new List<Node>();
         private Map map;
-        private HeuristicFunction function = new HeuristicFunction();
 
         public AStarAlgorithm(Map map)
         {
@@ -48,7 +45,7 @@ namespace Oop06b.Algorithm
             closeSet.Clear();
 
             current.GScore = 0;
-            current.FScore = function.CostEstimate(start, goal);
+            current.FScore = HeuristicFunction.CostEstimate(start, goal);
             openSet.Push(current);
             while (openSet.Count > 0)
             {
@@ -84,7 +81,7 @@ namespace Oop06b.Algorithm
                     {
                         node.Previous = current;
                         node.GScore = tentative_g_score;
-                        node.FScore = node.GScore + function.CostEstimate(node, goal);
+                        node.FScore = node.GScore + HeuristicFunction.CostEstimate(node, goal);
                         if (!openSet.Contains(node))
                         {
                             openSet.Push(node);

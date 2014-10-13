@@ -4,6 +4,7 @@ using Oop06b.Helpers;
 using Oop06b.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -19,8 +20,15 @@ namespace Oop06b.ViewModels
         private NodeType currentNodeType;
         private Map map;
         private MapControlViewModel mapControl;
-        private int speed;
-        private int[] timeDelay = { 64, 32, 16, 128, 256 };
+        private int speed = 0;
+        private int[] timeDelay = { 64, 32, 16, 8, 128, 256 };
+        private double time;
+
+        public double Time
+        {
+            get { return time; }
+            set { time = value; OnPropertyChanged("Time"); }
+        }
 
         public MainWindowViewModel()
         {
@@ -43,7 +51,7 @@ namespace Oop06b.ViewModels
             set
             {
                 currentNodeType = value;
-                NodeControl.CurrentType = value;
+                NodeControlViewModel.CurrentType = value;
                 OnPropertyChanged("CurrentNodeType");
             }
         }
@@ -80,9 +88,13 @@ namespace Oop06b.ViewModels
             await Task.Delay(100);
             map.Clean();
             cts = new CancellationTokenSource();
+            Stopwatch timer = new Stopwatch();
             try
             {
+                timer.Start();
                 var list = await astar.Run(cts.Token);
+                timer.Stop();
+                Time = timer.Elapsed.TotalSeconds;
                 if (list != null)
                 {
                     Controls.MapControl.Instance.ConnectPath(list);

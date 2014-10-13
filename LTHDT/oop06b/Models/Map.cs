@@ -12,7 +12,6 @@ namespace Oop06b.Models
     {
         private Node goal;
         private List<Node> nodes = new List<Node>();
-        private Random random = new Random();
         private Node start;
 
         public Map()
@@ -90,6 +89,7 @@ namespace Oop06b.Models
 
         public void RandomGenerate()
         {
+            Random random = new Random();
             Clear();
             for (int i = 0; i < nodes.Count / 2; i++)
             {
