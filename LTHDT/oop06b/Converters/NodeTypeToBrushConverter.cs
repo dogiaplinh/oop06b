@@ -23,13 +23,13 @@ namespace Oop06b.Converters
                     return new SolidColorBrush(Colors.Orange);
 
                 case NodeType.Goal:
-                    return new SolidColorBrush(Colors.Green);
+                    return new SolidColorBrush(Color.FromArgb(255, 30, 236, 30));
 
                 case NodeType.Obstacle:
-                    return new SolidColorBrush(Colors.Gray);
+                    return new SolidColorBrush(Color.FromArgb(255, 130, 130, 130));
 
                 case NodeType.OpenSet:
-                    return new SolidColorBrush(Colors.Blue);
+                    return new SolidColorBrush(Color.FromArgb(255, 100, 100, 255));
 
                 case NodeType.CloseSet:
                     return new SolidColorBrush(Colors.LightBlue);

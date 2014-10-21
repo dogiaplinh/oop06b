@@ -24,9 +24,11 @@ namespace Oop06b.Models
     /// <summary>
     /// Class của các nút trong bản đồ
     /// </summary>
-    public class Node : ModelBase, IComparer<Node>
+    public class Node : ModelBase
     {
+        private int id;
         private List<Node> neighbors = new List<Node>();
+
         private NodeType type;
 
         public Node()
@@ -38,12 +40,16 @@ namespace Oop06b.Models
 
         public double GScore { get; set; }
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; OnPropertyChanged("Id"); }
+        }
+
         public List<Node> Neighbors
         {
             get { return neighbors; }
         }
-
-        public Node Previous { get; set; }
 
         public NodeType Type
         {
@@ -55,24 +61,18 @@ namespace Oop06b.Models
 
         public int Y { get; set; }
 
-        public int Compare(Node x, Node y)
-        {
-            if (x.X == y.X)
-            {
-                if (x.Y == y.Y)
-                {
-                    return 0;
-                }
-            }
-            return 1;
-        }
-
         public void Reset()
         {
             Type = NodeType.Normal;
             FScore = 0;
             GScore = 0;
-            Previous = null;
+        }
+
+        public bool IsNormal()
+        {
+            if (type == NodeType.Goal || type == NodeType.Start)
+                return false;
+            return true;
         }
     }
 }

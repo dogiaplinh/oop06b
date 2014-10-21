@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace Oop06b.Models
 {
@@ -16,5 +17,6 @@ namespace Oop06b.Models
         public static double MapWidth = 1000;
         public static double Scale = 0.1;
         public static int Delay = 64;
+        public static Color[] LineColor = { Colors.Red, Colors.Purple, Colors.DarkOrange, Colors.DarkViolet, Colors.Brown };
     }
 }

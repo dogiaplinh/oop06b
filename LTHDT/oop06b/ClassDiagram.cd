@@ -35,15 +35,15 @@
       <FileName>Controls\PushPin.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.Helpers.PriorityQueue&lt;T&gt;" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Class Name="Oop06b.Helpers.PriorityQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAgAAAAAEAAAACAAAAAQAAACBAAAAAABBAABQCAA=</HashCode>
       <FileName>Helpers\PriorityQueue.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.Helpers.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Helpers\RelayCommand.cs</FileName>
@@ -61,7 +61,7 @@
   <Class Name="Oop06b.Algorithm.AStarAlgorithm" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAEAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAAAAAAI=</HashCode>
+      <HashCode>QAAAEAEAAAAAABAkAAAAAABAAAAAAAABAAAAAAAAAAI=</HashCode>
       <FileName>Algorithm\AStarAlgorithm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,51 +73,50 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.Models.Map" Collapsed="true">
-    <Position X="2.5" Y="4.75" Width="1.5" />
+    <Position X="2.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ASAAAAEAACAAABAgCAAAAAAAAAAAAAAAAAAAQABAcAA=</HashCode>
+      <HashCode>ACAAAAAAAAAAABAgCAAQAAABAAAAAAAAAAIgYABAcAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Oop06b.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.5" Y="3.75" Width="1.5" />
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABgAAAAAAAAEAAAAjAAAAIQBAAAAAYAA=</HashCode>
+      <HashCode>AAACAAAAAAAABAAAAAAAAAEAAAAjAAAAIQBAAAAAYgA=</HashCode>
       <FileName>Models\Node.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Oop06b.ViewModels.MainWindowViewModel" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABGAAAAAAIAAEAiQAAAAABAQAAAYEAIAAAAAAAAQE=</HashCode>
+      <HashCode>AAAAGAAAAAAIQgEAiQAAAAABEQAAgYEAIAAAAgACAAE=</HashCode>
       <FileName>ViewModels\MainWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.ViewModels.MapControlViewModel" Collapsed="true">
-    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgEAAAAAAAAAAAAAAAAAABAAAAAAAQQAIAAAAAIAA=</HashCode>
       <FileName>ViewModels\MapControlViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.ViewModels.NodeControlViewModel" Collapsed="true">
-    <Position X="2.5" Y="2.75" Width="1.5" />
+    <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAIAAAADAgAAAIAAAAIAEQGAAAA=</HashCode>
       <FileName>ViewModels\NodeControlViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.ViewModels.NotificationViewModel" Collapsed="true">
-    <Position X="2.5" Y="5.75" Width="1.5" />
+    <Position X="2.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAQQ=</HashCode>
+      <HashCode>AAABBAAAAAAgABAAAAAQAAAAAEAAAABAAAAAACAAAQQ=</HashCode>
       <FileName>ViewModels\NotificationViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Oop06b.ViewModels.PushPinViewModel" Collapsed="true">
-    <Position X="2.5" Y="6.75" Width="1.5" />
+    <Position X="2.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModels\PushPinViewModel.cs</FileName>
@@ -126,7 +125,7 @@
   <Struct Name="Oop06b.Models.Params" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAACAAEBA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAACAAEBA=</HashCode>
       <FileName>Models\Params.cs</FileName>
     </TypeIdentifier>
   </Struct>

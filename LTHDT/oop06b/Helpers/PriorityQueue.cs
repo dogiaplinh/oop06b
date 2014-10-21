@@ -7,11 +7,6 @@ namespace Oop06b.Helpers
         private IComparer<T> comparer;
         private List<T> list = new List<T>();
 
-        public PriorityQueue()
-        {
-            comparer = Comparer<T>.Default;
-        }
-
         public PriorityQueue(IComparer<T> comparer)
         {
             this.comparer = comparer;

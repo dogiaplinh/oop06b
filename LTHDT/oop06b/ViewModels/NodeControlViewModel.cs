@@ -17,8 +17,8 @@ namespace Oop06b.ViewModels
         public NodeControlViewModel(Node node)
         {
             this.node = node;
-            SetStartCommand = new RelayCommand((param) => this.SetStart());
-            SetGoalCommand = new RelayCommand((param) => this.SetGoal());
+            SetStartCommand = new RelayCommand((param) => this.SetStart(param));
+            SetGoalCommand = new RelayCommand((param) => this.SetGoal(param));
             MouseMoveCommand = new RelayCommand((param) => MouseMove());
         }
 
@@ -43,17 +43,22 @@ namespace Oop06b.ViewModels
 
         private void MouseMove()
         {
-            Node.Type = CurrentType;
+            if (Node.Type != NodeType.Start && Node.Type != NodeType.Goal)
+                Node.Type = CurrentType;
         }
 
-        private void SetGoal()
+        private void SetGoal(object param)
         {
-            MapControlViewModel.Instance.SetGoal(Node);
+            int id = Convert.ToInt32(param);
+            Node.Id = id;
+            MapControlViewModel.Instance.SetGoal(Node, id);
         }
 
-        private void SetStart()
+        private void SetStart(object param)
         {
-            MapControlViewModel.Instance.SetStart(Node);
+            int id = Convert.ToInt32(param);
+            Node.Id = id;
+            MapControlViewModel.Instance.SetStart(Node, id);
         }
     }
 }

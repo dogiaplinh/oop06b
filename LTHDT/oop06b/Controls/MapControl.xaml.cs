@@ -1,4 +1,5 @@
-﻿using Oop06b.Models;
+﻿using Oop06b.Helpers;
+using Oop06b.Models;
 using Oop06b.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Oop06b.Controls
     /// </summary>
     public partial class MapControl : UserControl
     {
-        private double timeDelay = 0.2;
+        private double timeDelay = 0.15;
         private List<NodeControl> nodes = new List<NodeControl>();
 
         public static readonly DependencyProperty ItemsSourceProperty =
@@ -44,8 +45,11 @@ namespace Oop06b.Controls
             SetView();
         }
 
-        public void ConnectPath(List<Node> nodes)
+        public void ConnectPath(List<Node> nodes, int index)
         {
+            Color color = Params.LineColor[index];
+            var start = nodes[0];
+            var goal = nodes[nodes.Count - 1];
             List<PushPinViewModel> list = new List<PushPinViewModel>();
             double center = -200 * Params.Scale / (1 - Params.Scale * 4);
             var scaleTransform = new ScaleTransform()
@@ -67,11 +71,11 @@ namespace Oop06b.Controls
                     Y1 = yOld,
                     X2 = xOld,
                     Y2 = yOld,
-                    Stroke = new SolidColorBrush(Colors.Red),
+                    Stroke = new SolidColorBrush(color),
                     StrokeThickness = 2,
                 };
                 GetLocation(node, out xOld, out yOld);
-                if (node.Type == NodeType.Start)
+                if (node == start)
                 {
                     // Add pushpin
                     AddPushpin(scaleTransform, storyboard, xOld, yOld, time);
@@ -106,7 +110,7 @@ namespace Oop06b.Controls
                 storyboard.Children.Add(animation2);
                 time = time + TimeSpan.FromSeconds(timeDelay);
                 i++;
-                if (node.Type == NodeType.Goal)
+                if (node == goal)
                 {
                     AddPushpin(scaleTransform, storyboard, xOld, yOld, time);
                 }

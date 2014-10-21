@@ -3186,6 +3186,10 @@
             <packageMoniker Id="ba04559c-d8d8-48f5-8237-117a546b2a48" LastKnownName="Helpers" />
             <elementDefinition Id="aec60550-d89a-4f77-9dbb-484788f2e4cf" />
           </packageImport>
+          <packageImport Id="ee25a1c0-66e1-4675-8aa4-69fdcc2606b9" visibility="Public">
+            <packageMoniker Id="aeb15e20-e283-4076-bd16-eaa51ba53997" LastKnownName="Models" />
+            <elementDefinition Id="4df9df4a-47d1-4547-9b93-fdc810942475" />
+          </packageImport>
         </importedPackagesInternal>
         <packagedElements>
           <packageHasNamedElement>

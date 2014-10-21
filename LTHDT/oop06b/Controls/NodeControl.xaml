@@ -13,13 +13,44 @@
              d:DesignWidth="300">
     <UserControl.Resources>
         <converter:NodeTypeToBrushConverter x:Key="NodeTypeToBrushConverter" />
+        <converter:NodeTypeToVisibilityConverter x:Key="NodeTypeToVisibilityConverter" />
     </UserControl.Resources>
     <UserControl.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="Set start"
-                      Command="{Binding SetStartCommand}" />
-            <MenuItem Header="Set goal"
-                      Command="{Binding SetGoalCommand}" />
+            <MenuItem Header="Set start">
+                <MenuItem Header="0"
+                          Command="{Binding SetStartCommand}"
+                          CommandParameter="0" />
+                <MenuItem Header="1"
+                          Command="{Binding SetStartCommand}"
+                          CommandParameter="1" />
+                <MenuItem Header="2"
+                          Command="{Binding SetStartCommand}"
+                          CommandParameter="2" />
+                <MenuItem Header="3"
+                          Command="{Binding SetStartCommand}"
+                          CommandParameter="3" />
+                <MenuItem Header="4"
+                          Command="{Binding SetStartCommand}"
+                          CommandParameter="4" />
+            </MenuItem>
+            <MenuItem Header="Set goal">
+                <MenuItem Header="0"
+                          Command="{Binding SetGoalCommand}"
+                          CommandParameter="0" />
+                <MenuItem Header="1"
+                          Command="{Binding SetGoalCommand}"
+                          CommandParameter="1" />
+                <MenuItem Header="2"
+                          Command="{Binding SetGoalCommand}"
+                          CommandParameter="2" />
+                <MenuItem Header="3"
+                          Command="{Binding SetGoalCommand}"
+                          CommandParameter="3" />
+                <MenuItem Header="4"
+                          Command="{Binding SetGoalCommand}"
+                          CommandParameter="4" />
+            </MenuItem>
         </ContextMenu>
     </UserControl.ContextMenu>
     <UserControl.RenderTransform>
@@ -47,15 +78,13 @@
                        Y="279.9" />
             </Polygon.Points>
         </Polygon>
-        <StackPanel Opacity="0"
-                    Orientation="Horizontal"
+        <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <TextBlock FontSize="70">
-                <Run Text="{Binding Node.X}" />
-                <Run Text=" " /><Run Text="," />
-                <Run Text=" " /><Run Text="{Binding Node.Y}" />
-            </TextBlock>
+            <TextBlock FontSize="120"
+                       Foreground="Black"
+                       Text="{Binding Node.Id}"
+                       Visibility="{Binding Node.Type, Converter={StaticResource NodeTypeToVisibilityConverter}}" />
         </StackPanel>
     </Grid>
 </UserControl>

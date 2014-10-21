@@ -12,6 +12,14 @@
         LastKnownName="Helpers"
         LastKnownLocation="Package_1655.uml" />
     </packageImport>
+    <packageImport
+      Id="4df9df4a-47d1-4547-9b93-fdc810942475"
+      visibility="Public">
+      <packageMoniker
+        Id="2b292d18-fa23-49f2-85ad-b7e907586b21"
+        LastKnownName="Models"
+        LastKnownLocation="Package_1719.uml" />
+    </packageImport>
   </importedPackagesInternal>
   <packagedElements>
     <packageHasNamedElement>

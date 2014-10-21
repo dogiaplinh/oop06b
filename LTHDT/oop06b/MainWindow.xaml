@@ -6,9 +6,8 @@
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
         x:Class="Oop06b.MainWindow"
         Title="MainWindow"
-        Height="701"
-        Width="1006"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize"
+        SizeToContent="WidthAndHeight">
     <Window.Resources>
         <converter:NodeTypeToBooleanConverter x:Key="NodeTypeToBooleanConverter" />
         <Style x:Key="FocusVisual">
@@ -66,11 +65,12 @@
                         <Border x:Name="border"
                                 BorderBrush="#FF00AEFF"
                                 SnapsToDevicePixels="true"
-                                Margin="10"
+                                Margin="5,10"
                                 Padding="5"
                                 Background="White"
                                 CornerRadius="5"
-                                BorderThickness="2" MinWidth="80">
+                                BorderThickness="2"
+                                MinWidth="80">
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
                                     <VisualState x:Name="Normal" />
@@ -696,15 +696,22 @@
             <Button Content="Reset map"
                     Command="{Binding ResetMapCommand}"
                     Style="{DynamicResource ButtonStyle1}" />
+            <Button Content="Clean map"
+                    Command="{Binding CleanMapCommand}"
+                    Style="{DynamicResource ButtonStyle1}" />
             <Button Content="Random map"
                     Command="{Binding RandomMapCommand}"
                     Style="{DynamicResource ButtonStyle1}" />
             <Button Content="Find"
                     Command="{Binding FindPathCommand}"
                     Style="{DynamicResource ButtonStyle1}" />
-            <ComboBox Margin="10"
+            <Button Content="Cancel"
+                    Command="{Binding CancelFindCommand}"
+                    Style="{DynamicResource ButtonStyle1}" />
+            <ComboBox Margin="5,10"
                       SelectedIndex="{Binding Speed, Mode=TwoWay}"
-                      Style="{DynamicResource ComboBoxStyle1}" MinWidth="80">
+                      Style="{DynamicResource ComboBoxStyle1}"
+                      MinWidth="80">
                 <ComboBoxItem Content="x1 Speed" />
                 <ComboBoxItem Content="x2 Speed" />
                 <ComboBoxItem Content="x4 Speed" />
@@ -712,10 +719,22 @@
                 <ComboBoxItem Content="x0.5 Speed" />
                 <ComboBoxItem Content="x0.25 Speed" />
             </ComboBox>
+            <ComboBox Margin="5,10"
+                      SelectedIndex="{Binding ThreadNo, Mode=TwoWay}"
+                      Style="{DynamicResource ComboBoxStyle1}"
+                      MinWidth="80">
+                <ComboBoxItem Content="1 thread" />
+                <ComboBoxItem Content="2 threads" />
+                <ComboBoxItem Content="3 threads" />
+                <ComboBoxItem Content="4 threads" />
+                <ComboBoxItem Content="5 threads" />
+            </ComboBox>
         </StackPanel>
         <Grid Grid.Row="1"
               x:Name="MapLayout">
-            <control:MapControl DataContext="{Binding MapControl}"
+            <control:MapControl Height="600"
+                                Width="1000"
+                                DataContext="{Binding MapControl}"
                                 Loaded="MapControl_Loaded" />
         </Grid>
         <StackPanel Grid.Row="2"

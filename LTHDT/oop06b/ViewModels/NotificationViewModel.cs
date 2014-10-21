@@ -1,4 +1,5 @@
 ﻿using Oop06b.Helpers;
+using Oop06b.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,19 @@ namespace Oop06b.ViewModels
     {
         private int distance;
         private bool isSuccess;
-        private TimeSpan time;
+        private int threadId;
+        private double time;
+        private int visitedNo;
+
+        public NotificationViewModel(Node start, Node goal)
+        {
+            Start = start;
+            Goal = goal;
+        }
+
+        public Node Start { get; private set; }
+
+        public Node Goal { get; private set; }
 
         public int Distance
         {
@@ -25,10 +38,22 @@ namespace Oop06b.ViewModels
             set { isSuccess = value; OnPropertyChanged("IsSuccess"); }
         }
 
-        public TimeSpan Time
+        public int ThreadId
+        {
+            get { return threadId; }
+            set { threadId = value; OnPropertyChanged("ThreadId"); }
+        }
+
+        public double Time
         {
             get { return time; }
             set { time = value; OnPropertyChanged("Time"); }
+        }
+
+        public int VisitedNo
+        {
+            get { return visitedNo; }
+            set { visitedNo = value; OnPropertyChanged("VisitedNo"); }
         }
     }
 }

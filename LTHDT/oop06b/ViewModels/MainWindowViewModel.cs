@@ -4,6 +4,7 @@ using Oop06b.Helpers;
 using Oop06b.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -16,34 +17,42 @@ namespace Oop06b.ViewModels
 {
     public class MainWindowViewModel : ModelBase
     {
-        private CancellationTokenSource cts;
+        private CancellationTokenSource[] cts;
         private NodeType currentNodeType;
         private Map map;
         private MapControlViewModel mapControl;
+        private ObservableCollection<NotificationViewModel> notifications = new ObservableCollection<NotificationViewModel>();
         private int speed = 0;
+        private int threadNo = 1;
         private int[] timeDelay = { 64, 32, 16, 8, 128, 256 };
-        private double time;
-
-        public double Time
-        {
-            get { return time; }
-            set { time = value; OnPropertyChanged("Time"); }
-        }
 
         public MainWindowViewModel()
         {
             map = new Map();
             MapControl = new MapControlViewModel(map);
+            cts = new CancellationTokenSource[10];
             CurrentNodeType = NodeType.Obstacle;
             ResetMapCommand = new RelayCommand((param) => ResetMap());
+            CleanMapCommand = new RelayCommand((param) => CleanMap());
             FindPathCommand = new RelayCommand((param) => FindPath());
-            RandomMapCommand = new RelayCommand((param) =>
-            {
-                if (cts != null)
-                    cts.Cancel();
-                map.RandomGenerate();
-            });
+            RandomMapCommand = new RelayCommand((param) => RandomMap());
+            CancelFindCommand = new RelayCommand((param) => CancelFind());
         }
+
+        private void RandomMap()
+        {
+            foreach (var item in cts)
+            {
+                if (item != null)
+                    item.Cancel();
+            }
+            Notifications.Clear();
+            map.RandomGenerate(threadNo);
+        }
+
+        public ICommand CancelFindCommand { get; private set; }
+
+        public ICommand CleanMapCommand { get; private set; }
 
         public NodeType CurrentNodeType
         {
@@ -56,7 +65,7 @@ namespace Oop06b.ViewModels
             }
         }
 
-        public ICommand FindPathCommand { get; set; }
+        public ICommand FindPathCommand { get; private set; }
 
         public MapControlViewModel MapControl
         {
@@ -64,9 +73,14 @@ namespace Oop06b.ViewModels
             set { mapControl = value; OnPropertyChanged("MapControl"); }
         }
 
-        public ICommand RandomMapCommand { get; set; }
+        public ObservableCollection<NotificationViewModel> Notifications
+        {
+            get { return notifications; }
+        }
 
-        public ICommand ResetMapCommand { get; set; }
+        public ICommand RandomMapCommand { get; private set; }
+
+        public ICommand ResetMapCommand { get; private set; }
 
         public int Speed
         {
@@ -80,38 +94,104 @@ namespace Oop06b.ViewModels
             }
         }
 
+        public int ThreadNo
+        {
+            get { return threadNo - 1; }
+            set { threadNo = value + 1; OnPropertyChanged("ThreadNo"); }
+        }
+
+        private void CancelFind()
+        {
+            foreach (var item in cts)
+            {
+                if (item != null)
+                    item.Cancel();
+            }
+        }
+
+        private void CleanMap()
+        {
+            foreach (var item in cts)
+            {
+                if (item != null)
+                    item.Cancel();
+            }
+            map.Clean();
+            Notifications.Clear();
+        }
+
         private async void FindPath()
         {
-            if (cts != null)
-                cts.Cancel();
-            AStarAlgorithm astar = new AStarAlgorithm(map);
+            foreach (var item in cts)
+            {
+                if (item != null)
+                    item.Cancel();
+            }
+            Notifications.Clear();
+            List<AStarAlgorithm> aStar = new List<AStarAlgorithm>();
+            for (int i = 0; i < 5; i++)
+            {
+                AStarAlgorithm item = new AStarAlgorithm(map, map.GetStart(i), map.GetGoal(i));
+                aStar.Add(item);
+            }
             await Task.Delay(100);
             map.Clean();
-            cts = new CancellationTokenSource();
+            for (int i = 0; i < 5; i++)
+            {
+                FindPath(aStar, i);
+            }
+        }
+
+        private async void FindPath(List<AStarAlgorithm> aStar, int i)
+        {
+            cts[i] = new CancellationTokenSource();
             Stopwatch timer = new Stopwatch();
             try
             {
                 timer.Start();
-                var list = await astar.Run(cts.Token);
+                var list = await aStar[i].Run(cts[i].Token);
                 timer.Stop();
-                Time = timer.Elapsed.TotalSeconds;
                 if (list != null)
                 {
-                    Controls.MapControl.Instance.ConnectPath(list);
+                    var noti = new NotificationViewModel(map.GetStart(i), map.GetGoal(i))
+                    {
+                        ThreadId = i,
+                        IsSuccess = true,
+                        VisitedNo = aStar[i].VisitedNo,
+                        Time = timer.Elapsed.TotalSeconds,
+                        Distance = aStar[i].Distance,
+                    };
+                    Notifications.Add(noti);
+                    Controls.MapControl.Instance.ConnectPath(list, i);
+                }
+                else
+                {
+                    var noti = new NotificationViewModel(map.GetStart(i), map.GetGoal(i))
+                    {
+                        ThreadId = i,
+                        IsSuccess = false,
+                        VisitedNo = aStar[i].VisitedNo,
+                        Time = timer.Elapsed.TotalSeconds,
+                        Distance = aStar[i].Distance,
+                    };
+                    Notifications.Add(noti);
                 }
             }
             catch (OperationCanceledException)
             {
-                cts = null;
-                return;
+                cts[i] = null;
             }
         }
 
         private void ResetMap()
         {
-            if (cts != null)
-                cts.Cancel();
+            foreach (var item in cts)
+            {
+                if (item != null)
+                    item.Cancel();
+            }
             map.Clear();
+            Notifications.Clear();
         }
     }
 }

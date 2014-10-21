@@ -14,20 +14,29 @@ namespace Oop06b.Algorithm
     {
         private PriorityQueue<Node> openSet = new PriorityQueue<Node>(Comparer<Node>.Create((x, y) => x.FScore.CompareTo(y.FScore)));
         private List<Node> closeSet = new List<Node>();
+        private Dictionary<Node, Node> previousNode = new Dictionary<Node, Node>();
         private Map map;
+        private Node start;
+        private Node goal;
 
-        public AStarAlgorithm(Map map)
+        public int Distance { get; private set; }
+
+        public int VisitedNo { get; private set; }
+
+        public AStarAlgorithm(Map map, Node start, Node goal)
         {
             this.map = map;
+            this.start = start;
+            this.goal = goal;
         }
 
-        private static List<Node> ReconstructPath(Node node)
+        private List<Node> ReconstructPath(Node node)
         {
             List<Node> list = new List<Node>();
-            while (node.Type != NodeType.Start)
+            while (node != start)
             {
                 list.Add(node);
-                node = node.Previous;
+                node = previousNode[node];
             }
             list.Add(node);
             list.Reverse();
@@ -36,10 +45,9 @@ namespace Oop06b.Algorithm
 
         public async Task<List<Node>> Run(CancellationToken ct)
         {
-            if (map.Start == null || map.Goal == null)
-                map.RandomGenerate();
-            var start = map.Start;
-            var goal = map.Goal;
+            VisitedNo = 0;
+            if (start == null || goal == null)
+                return null;
             Node current = start;
             openSet.Clear();
             closeSet.Clear();
@@ -58,16 +66,17 @@ namespace Oop06b.Algorithm
                     return null;
                 }
                 current = openSet.Pop();
+                VisitedNo++;
                 if (current == goal)
                 {
+                    Distance = (int)current.FScore;
                     return ReconstructPath(current);
-                    //closeSet.Add(parentNode);
-                    //break;
                 }
                 closeSet.Add(current);
                 if (current != start)
                 {
-                    current.Type = NodeType.CloseSet;
+                    if (current.IsNormal())
+                        current.Type = NodeType.CloseSet;
                 }
 
                 foreach (var node in current.Neighbors)
@@ -79,7 +88,9 @@ namespace Oop06b.Algorithm
                     double tentative_g_score = current.GScore + 1;
                     if (!openSet.Contains(node) || tentative_g_score < node.GScore)
                     {
-                        node.Previous = current;
+                        if (!previousNode.ContainsKey(node))
+                            previousNode.Add(node, current);
+                        else previousNode[node] = current;
                         node.GScore = tentative_g_score;
                         node.FScore = node.GScore + HeuristicFunction.CostEstimate(node, goal);
                         if (!openSet.Contains(node))
@@ -87,7 +98,8 @@ namespace Oop06b.Algorithm
                             openSet.Push(node);
                             if (node != goal)
                             {
-                                node.Type = NodeType.OpenSet;
+                                if (node.IsNormal())
+                                    node.Type = NodeType.OpenSet;
                             }
                         }
                     }

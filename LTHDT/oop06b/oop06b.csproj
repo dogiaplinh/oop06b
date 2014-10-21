@@ -66,8 +66,11 @@
     <Compile Include="Controls\PushPin.xaml.cs">
       <DependentUpon>PushPin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BooleanToBrushConverter.cs" />
+    <Compile Include="Converters\BooleanToStatusConverter.cs" />
     <Compile Include="Converters\NodeTypeToBooleanConverter.cs" />
     <Compile Include="Converters\NodeTypeToBrushConverter.cs" />
+    <Compile Include="Converters\NodeTypeToVisibilityConverter.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\ModelBase.cs" />
     <Compile Include="Models\Params.cs" />
@@ -141,7 +144,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <DesignData Include="SampleData\NotificationViewModelSampleData.xaml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

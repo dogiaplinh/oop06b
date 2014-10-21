@@ -28,14 +28,14 @@ namespace Oop06b.ViewModels
             get { return nodes; }
         }
 
-        public void SetGoal(Node node)
+        public void SetGoal(Node node, int i)
         {
-            map.Goal = node;
+            map.SetGoal(node, i);
         }
 
-        public void SetStart(Node node)
+        public void SetStart(Node node, int i)
         {
-            map.Start = node;
+            map.SetStart(node, i);
         }
 
         private void SetView()

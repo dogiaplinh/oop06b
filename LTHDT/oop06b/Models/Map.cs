@@ -10,48 +10,92 @@ namespace Oop06b.Models
 {
     public class Map : ModelBase, IEnumerable<Node>
     {
-        private Node goal;
+        private Node[] goals;
         private List<Node> nodes = new List<Node>();
-        private Node start;
+        private Node[] starts;
 
         public Map()
         {
+            goals = new Node[5];
+            starts = new Node[5];
             CreateMap();
         }
 
-        public Node Goal
+        public Node GetStart(int i)
         {
-            get { return goal; }
-            set
+            return starts[i];
+        }
+
+        public Node GetGoal(int i)
+        {
+            return goals[i];
+        }
+
+        public void SetStart(Node node, int i)
+        {
+            if (starts[i] == null)
             {
-                if (goal != value)
-                {
-                    if (goal != null)
-                        goal.Type = NodeType.Normal;
-                    goal = value;
-                    if (goal != null)
-                        goal.Type = NodeType.Goal;
-                    OnPropertyChanged("Goal");
-                }
+                starts[i] = node;
+                node.Id = i;
+                node.Type = NodeType.Start;
+            }
+            else
+            {
+                starts[i].Type = NodeType.Normal;
+                starts[i] = node;
+                node.Type = NodeType.Start;
             }
         }
 
-        public Node Start
+        public void SetGoal(Node node, int i)
         {
-            get { return start; }
-            set
+            if (goals[i] == null)
             {
-                if (start != value)
-                {
-                    if (start != null)
-                        start.Type = NodeType.Normal;
-                    start = value;
-                    if (start != null)
-                        start.Type = NodeType.Start;
-                    OnPropertyChanged("Start");
-                }
+                goals[i] = node;
+                node.Id = i;
+                node.Type = NodeType.Goal;
+            }
+            else
+            {
+                goals[i].Type = NodeType.Normal;
+                goals[i] = node;
+                node.Type = NodeType.Goal;
             }
         }
+
+        //public Node Goal
+        //{
+        //    get { return goal; }
+        //    set
+        //    {
+        //        if (goal != value)
+        //        {
+        //            if (goal != null)
+        //                goal.Type = NodeType.Normal;
+        //            goal = value;
+        //            if (goal != null)
+        //                goal.Type = NodeType.Goal;
+        //            OnPropertyChanged("Goal");
+        //        }
+        //    }
+        //}
+
+        //public Node Start
+        //{
+        //    get { return start; }
+        //    set
+        //    {
+        //        if (start != value)
+        //        {
+        //            if (start != null)
+        //                start.Type = NodeType.Normal;
+        //            start = value;
+        //            if (start != null)
+        //                start.Type = NodeType.Start;
+        //            OnPropertyChanged("Start");
+        //        }
+        //    }
+        //}
 
         public Node this[int i, int j]
         {
@@ -82,12 +126,14 @@ namespace Oop06b.Models
             {
                 item.Reset();
             }
-            start = null;
-            goal = null;
+            for (int i = 0; i < 5; i++)
+            {
+                starts[i] = goals[i] = null;
+            }
             MapControl.Instance.ClearPath();
         }
 
-        public void RandomGenerate()
+        public void RandomGenerate(int number)
         {
             Random random = new Random();
             Clear();
@@ -96,16 +142,20 @@ namespace Oop06b.Models
                 int a = random.Next(nodes.Count);
                 nodes[a].Type = NodeType.Obstacle;
             }
-            int b = random.Next(nodes.Count);
-            Start = nodes[b];
-            int c;
-            do
+            List<int> list = new List<int>();
+            for (int i = 0; i < nodes.Count; i++)
             {
-                c = random.Next(nodes.Count);
-                if (Start != nodes[c])
-                    Goal = nodes[c];
+                list.Add(i);
             }
-            while (b == c);
+            for (int i = 0; i < number; i++)
+            {
+                int b = random.Next(list.Count);
+                SetStart(nodes[b], i);
+                list.RemoveAt(b);
+                b = random.Next(list.Count);
+                SetGoal(nodes[b], i);
+                list.RemoveAt(b);
+            }
         }
 
         private void CreateMap()
