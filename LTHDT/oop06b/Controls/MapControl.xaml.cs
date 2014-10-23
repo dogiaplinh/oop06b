@@ -48,6 +48,7 @@ namespace Oop06b.Controls
         public void ConnectPath(List<Node> nodes, int index)
         {
             Color color = Params.LineColor[index];
+            List<Line> lines = new List<Line>();
             var start = nodes[0];
             var goal = nodes[nodes.Count - 1];
             List<PushPinViewModel> list = new List<PushPinViewModel>();
@@ -84,6 +85,25 @@ namespace Oop06b.Controls
                     continue;
                 }
                 MainCanvas.Children.Add(line);
+                lines.Add(line);
+                line.MouseMove += (sender, e) =>
+                    {
+                        foreach (var item in lines)
+                        {
+                            MainCanvas.Children.Remove(item);
+                            item.StrokeThickness = 4;
+                            MainCanvas.Children.Add(item);
+                        }
+                    };
+                line.MouseLeave += (sender, e) =>
+                {
+                    foreach (var item in lines)
+                    {
+                        MainCanvas.Children.Remove(item);
+                        item.StrokeThickness = 2;
+                        MainCanvas.Children.Add(item);
+                    }
+                };
                 if (!MainCanvas.Resources.Contains("line" + i.ToString()))
                     MainCanvas.Resources.Add("line" + i.ToString(), line);
                 else MainCanvas.Resources["line" + i.ToString()] = line;

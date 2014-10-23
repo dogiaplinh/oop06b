@@ -17,6 +17,6 @@ namespace Oop06b.Models
         public static double MapWidth = 1000;
         public static double Scale = 0.1;
         public static int Delay = 64;
-        public static Color[] LineColor = { Colors.Red, Colors.Purple, Colors.DarkOrange, Colors.DarkViolet, Colors.Brown };
+        public static Color[] LineColor = { Colors.DarkRed, Colors.DarkGreen, Colors.DarkOrange, Colors.DarkViolet, Colors.Brown };
     }
 }

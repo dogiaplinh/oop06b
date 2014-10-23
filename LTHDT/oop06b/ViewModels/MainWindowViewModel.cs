@@ -128,28 +128,26 @@ namespace Oop06b.ViewModels
                     item.Cancel();
             }
             Notifications.Clear();
-            List<AStarAlgorithm> aStar = new List<AStarAlgorithm>();
-            for (int i = 0; i < 5; i++)
-            {
-                AStarAlgorithm item = new AStarAlgorithm(map, map.GetStart(i), map.GetGoal(i));
-                aStar.Add(item);
-            }
             await Task.Delay(100);
             map.Clean();
             for (int i = 0; i < 5; i++)
             {
-                FindPath(aStar, i);
+                if (map.GetStart(i) != null || map.GetGoal(i) != null)
+                {
+                    AStarAlgorithm item = new AStarAlgorithm(map, map.GetStart(i), map.GetGoal(i));
+                    FindPath(item, i);
+                }
             }
         }
 
-        private async void FindPath(List<AStarAlgorithm> aStar, int i)
+        private async void FindPath(AStarAlgorithm aStar, int i)
         {
             cts[i] = new CancellationTokenSource();
             Stopwatch timer = new Stopwatch();
             try
             {
                 timer.Start();
-                var list = await aStar[i].Run(cts[i].Token);
+                var list = await aStar.Run(cts[i].Token);
                 timer.Stop();
                 if (list != null)
                 {
@@ -157,9 +155,9 @@ namespace Oop06b.ViewModels
                     {
                         ThreadId = i,
                         IsSuccess = true,
-                        VisitedNo = aStar[i].VisitedNo,
+                        VisitedNo = aStar.VisitedNo,
                         Time = timer.Elapsed.TotalSeconds,
-                        Distance = aStar[i].Distance,
+                        Distance = aStar.Distance,
                     };
                     Notifications.Add(noti);
                     Controls.MapControl.Instance.ConnectPath(list, i);
@@ -170,9 +168,9 @@ namespace Oop06b.ViewModels
                     {
                         ThreadId = i,
                         IsSuccess = false,
-                        VisitedNo = aStar[i].VisitedNo,
+                        VisitedNo = aStar.VisitedNo,
                         Time = timer.Elapsed.TotalSeconds,
-                        Distance = aStar[i].Distance,
+                        Distance = aStar.Distance,
                     };
                     Notifications.Add(noti);
                 }
