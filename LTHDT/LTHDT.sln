@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop06b", "oop06b\oop06b.csproj", "{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}"
-EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "ModelingProject\ModelingProject.modelproj", "{28EE5D5F-9627-4F53-B95C-71C0AC02493E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oop06b", "oop06b\oop06b.csproj", "{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28EE5D5F-9627-4F53-B95C-71C0AC02493E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28EE5D5F-9627-4F53-B95C-71C0AC02493E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28EE5D5F-9627-4F53-B95C-71C0AC02493E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28EE5D5F-9627-4F53-B95C-71C0AC02493E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

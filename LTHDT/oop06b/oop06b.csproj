@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F6E909E5-3B1F-4D7D-BFF0-8CA92D7098BA}</ProjectGuid>
+    <ProjectGuid>{D96BF85F-1F88-4545-AF35-4578DBD1DCBF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Oop06b</RootNamespace>
+    <RootNamespace>oop06b</RootNamespace>
     <AssemblyName>oop06b</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <ExpressionBlendVersion>12.0.50716.0</ExpressionBlendVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,11 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Interactions" />
-    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,45 +53,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\MapControl.xaml.cs">
-      <DependentUpon>MapControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Notification.xaml.cs">
-      <DependentUpon>Notification.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PushPin.xaml.cs">
-      <DependentUpon>PushPin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Converters\BooleanToBrushConverter.cs" />
-    <Compile Include="Converters\BooleanToStatusConverter.cs" />
-    <Compile Include="Converters\NodeTypeToBooleanConverter.cs" />
-    <Compile Include="Converters\NodeTypeToBrushConverter.cs" />
-    <Compile Include="Converters\NodeTypeToVisibilityConverter.cs" />
-    <Compile Include="Helpers\RelayCommand.cs" />
-    <Compile Include="Helpers\ModelBase.cs" />
-    <Compile Include="Models\Params.cs" />
-    <Compile Include="Algorithm\HeuristicFunction.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\MapControlViewModel.cs" />
-    <Compile Include="ViewModels\NodeControlViewModel.cs" />
-    <Compile Include="ViewModels\NotificationViewModel.cs" />
-    <Compile Include="ViewModels\PushPinViewModel.cs" />
-    <Page Include="Controls\MapControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\NodeControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\Notification.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PushPin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,19 +61,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\NodeControl.xaml.cs">
-      <DependentUpon>NodeControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Helpers\PriorityQueue.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithm\AStarAlgorithm.cs" />
-    <Compile Include="Models\Map.cs" />
-    <Compile Include="Models\Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -134,7 +84,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,9 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <DesignData Include="SampleData\NotificationViewModelSampleData.xaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
