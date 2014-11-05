@@ -11,5 +11,9 @@ namespace oop06b.Models
     /// </summary>
     internal struct Params
     {
+        /// <summary>
+        /// Số luồng cực đại
+        /// </summary>
+        public static int MAX_THREAD = 5;
     }
 }

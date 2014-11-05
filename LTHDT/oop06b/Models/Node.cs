@@ -7,28 +7,59 @@ using System.Threading.Tasks;
 
 namespace oop06b.Models
 {
+    internal enum NodeType
+    {
+        Start,
+        Goal,
+        Normal,
+        Ostacle,
+        OpenSet,
+        CloseSet,
+    }
+
     /// <summary>
     /// Lớp của các nút trong mạng
     /// </summary>
     internal class Node : ModelBase
     {
-        private int x;
-        private int y;
+        private int id;
+        private List<Node> neighbors = new List<Node>();
+        private NodeType type;
 
         public Node()
         {
         }
 
-        public int X
+        /// <summary>
+        /// ID của nút, để phân biệt các nút start và goal
+        /// </summary>
+        public int Id
         {
-            get { return x; }
-            set { x = value; OnPropertyChanged("X"); }
+            get { return id; }
+            set { id = value; OnPropertyChanged("Id"); }
         }
 
-        public int Y
+        public List<Node> Neighbors
         {
-            get { return y; }
-            set { y = value; OnPropertyChanged("Y"); }
+            get { return neighbors; }
+        }
+
+        public NodeType Type
+        {
+            get { return type; }
+            set { type = value; OnPropertyChanged("Type"); }
+        }
+
+        public int X { get; set; }
+
+        public int Y { get; set; }
+
+        /// <summary>
+        /// Xoá ô về trạng thái gốc
+        /// </summary>
+        public void Reset()
+        {
+            Type = NodeType.Normal;
         }
     }
 }
