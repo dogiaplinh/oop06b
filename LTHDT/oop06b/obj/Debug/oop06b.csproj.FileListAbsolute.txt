@@ -1,13 +1,89 @@
+C:\Users\Linh\Desktop\oop06b\bin\Debug\oop06b.exe.config
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b.exe
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b.pdb
+C:\Users\Linh\Desktop\oop06b\bin\Debug\oop06b.exe
+C:\Users\Linh\Desktop\oop06b\bin\Debug\oop06b.pdb
+C:\Users\Linh\Desktop\oop06b\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\MapControl.baml
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\PushPin.baml
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\MapControl.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\NodeControl.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\Notification.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\PushPin.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\MainWindow.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\App.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b_MarkupCompile.cache
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b_MarkupCompile.lref
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\NodeControl.baml
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Controls\Notification.baml
+C:\Users\Linh\Desktop\oop06b\obj\Debug\MainWindow.baml
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b.g.resources
+C:\Users\Linh\Desktop\oop06b\obj\Debug\Oop06b.Properties.Resources.resources
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b.csproj.GenerateResource.Cache
+C:\Users\Linh\Desktop\oop06b\obj\Debug\oop06b.csprojResolveAssemblyReference.cache
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.exe.config
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.exe
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\oop06b.pdb
-C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.csprojResolveAssemblyReference.cache
-C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\MainWindow.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\MapControl.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\PushPin.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\MapControl.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\NodeControl.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Notification.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\PushPin.g.cs
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\MainWindow.g.cs
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\App.g.cs
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b_MarkupCompile.cache
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b_MarkupCompile.lref
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\NodeControl.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Controls\Notification.baml
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\MainWindow.baml
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.g.resources
-C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.Properties.Resources.resources
+C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\Oop06b.Properties.Resources.resources
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.csproj.GenerateResource.Cache
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.exe
 C:\Users\Linh\Documents\Visual Studio 2013\Projects\oop06b\LTHDT\oop06b\obj\Debug\oop06b.pdb

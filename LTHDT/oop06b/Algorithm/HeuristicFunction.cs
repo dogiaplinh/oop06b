@@ -1,0 +1,14 @@
+﻿using Oop06b.Models;
+using System;
+
+namespace Oop06b.Algorithm
+{
+    public static class HeuristicFunction
+    {
+        public static double CostEstimate(Node a, Node b)
+        {
+            double h = Math.Abs(a.X - b.X) + Math.Abs(a.Y - b.Y) + Math.Abs(a.X + a.Y - b.X - b.Y);
+            return h / 2;
+        }
+    }
+}

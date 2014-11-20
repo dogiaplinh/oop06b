@@ -1,42 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace oop06b.Helpers
+namespace Oop06b.Helpers
 {
-    /// <summary>
-    /// Hàng đợi có ưu tiên
-    /// </summary>
-    /// <typeparam name="T">Kiểu dữ liệu của phần tử</typeparam>
-    internal class PriorityQueue<T>
+    public class PriorityQueue<T>
     {
         private IComparer<T> comparer;
         private List<T> list = new List<T>();
 
-        /// <summary>
-        /// Tạo mới hàng đợi
-        /// </summary>
-        /// <param name="comparer">Cách thức so sánh 2 phần tử</param>
         public PriorityQueue(IComparer<T> comparer)
         {
             this.comparer = comparer;
         }
 
-        /// <summary>
-        /// Lấy số phần tử của hàng đợi
-        /// </summary>
         public int Count
         {
             get { return list.Count; }
         }
 
-        /// <summary>
-        /// Lấy và sửa 1 phần tử của hàng đợi
-        /// </summary>
-        /// <param name="index">Chỉ số của phần tử</param>
-        /// <returns>Phần tử</returns>
         public T this[int index]
         {
             get { return list[index]; }
@@ -47,28 +27,16 @@ namespace oop06b.Helpers
             }
         }
 
-        /// <summary>
-        /// Xoá hết các phần tử trong hàng đợi
-        /// </summary>
         public void Clear()
         {
             list.Clear();
         }
 
-        /// <summary>
-        /// Kiểm tra 1 phần tử có trong hàng đợi không
-        /// </summary>
-        /// <param name="item">Phần tử cần kiểm tra</param>
-        /// <returns>Kết quả kiểm tra</returns>
         public bool Contains(T item)
         {
             return list.Contains(item);
         }
 
-        /// <summary>
-        /// Trả về phần tử đứng đầu hàng đợi nhưng không loại nó khỏi hàng đợi
-        /// </summary>
-        /// <returns>Phần tử đứng đầu</returns>
         public T Peek()
         {
             if (list.Count > 0)
@@ -76,10 +44,6 @@ namespace oop06b.Helpers
             return default(T);
         }
 
-        /// <summary>
-        /// Lấy ra phần tử đứng đầu của hàng đợi
-        /// </summary>
-        /// <returns>Phần tử đứng đầu</returns>
         public T Pop()
         {
             T result = list[0];
@@ -104,10 +68,6 @@ namespace oop06b.Helpers
             return result;
         }
 
-        /// <summary>
-        /// Thêm phần tử vào hàng đợi
-        /// </summary>
-        /// <param name="item">Phần tử cần thêm</param>
         public void Push(T item)
         {
             int p = list.Count, p2;

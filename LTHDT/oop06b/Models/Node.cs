@@ -1,38 +1,41 @@
-﻿using oop06b.Helpers;
+﻿using Oop06b.Helpers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Models
 {
-    internal enum NodeType
+    /// <summary>
+    /// Tập các loại của nút
+    /// </summary>
+    public enum NodeType
     {
+        Normal,
         Start,
         Goal,
-        Normal,
-        Ostacle,
+        Obstacle,
         OpenSet,
         CloseSet,
     }
 
     /// <summary>
-    /// Lớp của các nút trong mạng
+    /// Class của các nút trong bản đồ
     /// </summary>
-    internal class Node : ModelBase
+    public class Node : BindableBase
     {
         private int id;
         private List<Node> neighbors = new List<Node>();
+
         private NodeType type;
 
         public Node()
         {
+            Type = NodeType.Normal;
         }
 
-        /// <summary>
-        /// ID của nút, để phân biệt các nút start và goal
-        /// </summary>
         public int Id
         {
             get { return id; }
@@ -54,12 +57,16 @@ namespace oop06b.Models
 
         public int Y { get; set; }
 
-        /// <summary>
-        /// Xoá ô về trạng thái gốc
-        /// </summary>
         public void Reset()
         {
             Type = NodeType.Normal;
+        }
+
+        public bool IsNormal()
+        {
+            if (type == NodeType.Goal || type == NodeType.Start)
+                return false;
+            return true;
         }
     }
 }

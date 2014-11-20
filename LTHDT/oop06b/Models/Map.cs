@@ -1,16 +1,14 @@
-﻿using oop06b.Helpers;
+﻿using Oop06b.Controls;
+using Oop06b.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop06b.Models
+namespace Oop06b.Models
 {
-    /// <summary>
-    /// Class bản đồ toàn mạng
-    /// </summary>
-    internal class Map : ModelBase, IEnumerable<Node>
+    public class Map : BindableBase, IEnumerable<Node>
     {
         private Node[] goals;
         private List<Node> nodes = new List<Node>();
@@ -18,63 +16,85 @@ namespace oop06b.Models
 
         public Map()
         {
-            starts = new Node[Params.MAX_THREAD];
-            goals = new Node[Params.MAX_THREAD];
-            createMap();
+            goals = new Node[5];
+            starts = new Node[5];
+            CreateMap();
         }
 
-        /// <summary>
-        /// Lấy 1 nút có toạ độ (x, y)
-        /// </summary>
-        /// <param name="x">x</param>
-        /// <param name="y">y</param>
-        /// <returns>Nút ở toạ độ (x, y)</returns>
-        public Node this[int x, int y]
+        public Node this[int i, int j]
         {
             get
             {
                 foreach (var item in nodes)
                 {
-                    if (item.X == x && item.Y == y)
+                    if (item.X == i && item.Y == j)
                         return item;
                 }
                 return null;
             }
         }
 
-        /// <summary>
-        /// Dọn dẹp bản đồ = xoá các nút tạm thời trong khi tìm đường
-        /// </summary>
         public void Clean()
         {
+            foreach (var item in nodes)
+            {
+                if (item.Type == NodeType.OpenSet || item.Type == NodeType.CloseSet)
+                    item.Reset();
+            }
+            MapControl.Instance.ClearPath();
+        }
+
+        public void Clear()
+        {
+            foreach (var item in nodes)
+            {
+                item.Reset();
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                starts[i] = goals[i] = null;
+            }
+            MapControl.Instance.ClearPath();
+        }
+
+        public IEnumerator<Node> GetEnumerator()
+        {
+            return nodes.GetEnumerator();
         }
 
         public Node GetGoal(int i)
         {
-            if (i >= 0 && i < Params.MAX_THREAD)
-                return goals[i];
-            return null;
+            return goals[i];
         }
 
         public Node GetStart(int i)
         {
-            if (i >= 0 && i < Params.MAX_THREAD)
-                return starts[i];
-            return null;
+            return starts[i];
         }
 
-        /// <summary>
-        /// Tạo bản đồ ngẫu nhiên
-        /// </summary>
-        public void RandomGenerate()
+        public void RandomGenerate(int number)
         {
-        }
-
-        /// <summary>
-        /// Xoá toàn bộ bản đồ
-        /// </summary>
-        public void Reset()
-        {
+            Random random = new Random();
+            Clear();
+            for (int i = 0; i < nodes.Count / 2; i++)
+            {
+                int a = random.Next(nodes.Count);
+                nodes[a].Type = NodeType.Obstacle;
+            }
+            List<int> list = new List<int>();
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                list.Add(i);
+            }
+            for (int i = 0; i < number; i++)
+            {
+                int b = list[random.Next(list.Count)];
+                SetStart(nodes[b], i);
+                list.RemoveAt(b);
+                b = list[random.Next(list.Count)];
+                SetGoal(nodes[b], i);
+                list.RemoveAt(b);
+            }
         }
 
         public void SetGoal(Node node, int i)
@@ -82,7 +102,7 @@ namespace oop06b.Models
             if (goals[i] == null)
             {
                 goals[i] = node;
-                goals[i].Id = i;
+                node.Id = i;
                 node.Type = NodeType.Goal;
             }
             else
@@ -98,7 +118,7 @@ namespace oop06b.Models
             if (starts[i] == null)
             {
                 starts[i] = node;
-                starts[i].Id = i;
+                node.Id = i;
                 node.Type = NodeType.Start;
             }
             else
@@ -109,21 +129,52 @@ namespace oop06b.Models
             }
         }
 
-        /// <summary>
-        /// Tạo bản đồ, gán giá trị cho neighbors của các nút
-        /// </summary>
-        private void createMap()
-        {
-        }
-
-        public IEnumerator<Node> GetEnumerator()
-        {
-            return nodes.GetEnumerator();
-        }
-
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
-            return null;
+            throw new NotImplementedException();
+        }
+
+        private void CreateMap()
+        {
+            int a = (int)(1000 / Params.Scale / 300 / 2 * 4 / 3) - 1;
+            for (int i = -a; i <= a; i++)
+            {
+                int start = (int)Math.Ceiling((-Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3) + 1;
+                int end = (int)Math.Floor((Params.MapHeight / 300 / Params.Scale - 1 - i * Params.SQRT3 / 2) / Params.SQRT3);
+                for (int j = start; j <= end; j++)
+                {
+                    nodes.Add(new Node() { X = i, Y = j });
+                }
+            }
+            Node node;
+            // Add neighbors to each node
+            foreach (var item in nodes)
+            {
+                if ((node = this[item.X - 1, item.Y]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X, item.Y - 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X + 1, item.Y - 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X + 1, item.Y]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X, item.Y + 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+                if ((node = this[item.X - 1, item.Y + 1]) != null)
+                {
+                    item.Neighbors.Add(node);
+                }
+            }
         }
     }
 }
