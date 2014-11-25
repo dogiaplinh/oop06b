@@ -1,11 +1,11 @@
-﻿using Oop06b.Models;
+﻿using De06B_Nhom02.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Oop06b.Algorithm
+namespace De06B_Nhom02.Algorithm
 {
     public class RuntimeData
     {

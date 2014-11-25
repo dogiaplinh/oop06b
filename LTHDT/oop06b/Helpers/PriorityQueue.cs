@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Oop06b.Helpers
+namespace De06B_Nhom02.Helpers
 {
     public class PriorityQueue<T>
     {

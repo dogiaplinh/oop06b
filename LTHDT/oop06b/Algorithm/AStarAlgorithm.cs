@@ -1,11 +1,11 @@
-﻿using Oop06b.Helpers;
-using Oop06b.Models;
+﻿using De06B_Nhom02.Helpers;
+using De06B_Nhom02.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Oop06b.Algorithm
+namespace De06B_Nhom02.Algorithm
 {
     /// <summary>
     /// Class thuật toán A* đế tìm đường

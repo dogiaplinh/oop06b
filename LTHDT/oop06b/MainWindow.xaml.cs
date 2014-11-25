@@ -1,8 +1,8 @@
-﻿using Oop06b.Models;
-using Oop06b.ViewModels;
+﻿using De06B_Nhom02.Models;
+using De06B_Nhom02.ViewModels;
 using System.Windows;
 
-namespace Oop06b
+namespace De06B_Nhom02
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

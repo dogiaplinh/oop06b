@@ -1,4 +1,4 @@
-﻿using Oop06b.Models;
+﻿using De06B_Nhom02.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace Oop06b.Converters
+namespace De06B_Nhom02.Converters
 {
     public class NodeTypeToBrushConverter : IValueConverter
     {
@@ -26,7 +26,7 @@ namespace Oop06b.Converters
                     return new SolidColorBrush(Color.FromArgb(255, 30, 236, 30));
 
                 case NodeType.Obstacle:
-                    return new SolidColorBrush(Color.FromArgb(255, 130, 130, 130));
+                    return new SolidColorBrush(Color.FromArgb(255, 100, 100, 100));
 
                 case NodeType.OpenSet:
                     return new SolidColorBrush(Color.FromArgb(255, 100, 100, 255));

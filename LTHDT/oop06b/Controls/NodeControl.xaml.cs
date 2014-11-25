@@ -1,5 +1,5 @@
-﻿using Oop06b.Models;
-using Oop06b.ViewModels;
+﻿using De06B_Nhom02.Models;
+using De06B_Nhom02.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Oop06b.Controls
+namespace De06B_Nhom02.Controls
 {
     /// <summary>
     /// Interaction logic for Hexagon.xaml

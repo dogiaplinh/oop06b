@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Oop06b.Helpers
+namespace De06B_Nhom02.Helpers
 {
     public class RelayCommand : ICommand
     {

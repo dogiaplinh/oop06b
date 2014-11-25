@@ -1,8 +1,8 @@
-﻿using Oop06b.Models;
+﻿using De06B_Nhom02.Models;
 using System;
 using System.Windows.Data;
 
-namespace Oop06b.Converters
+namespace De06B_Nhom02.Converters
 {
     public class NodeTypeToBooleanConverter : IValueConverter
     {
@@ -13,9 +13,6 @@ namespace Oop06b.Converters
             {
                 case NodeType.Normal:
                     return false;
-
-                case NodeType.Obstacle:
-                    return true;
 
                 default:
                     return true;

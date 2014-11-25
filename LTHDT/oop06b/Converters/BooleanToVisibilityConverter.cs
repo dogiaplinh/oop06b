@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace Oop06b.Converters
+namespace De06B_Nhom02.Converters
 {
     public class BooleanToVisibilityConverter : IValueConverter
     {

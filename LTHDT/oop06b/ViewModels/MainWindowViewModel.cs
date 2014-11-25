@@ -1,7 +1,7 @@
-﻿using Oop06b.Algorithm;
-using Oop06b.Controls;
-using Oop06b.Helpers;
-using Oop06b.Models;
+﻿using De06B_Nhom02.Algorithm;
+using De06B_Nhom02.Controls;
+using De06B_Nhom02.Helpers;
+using De06B_Nhom02.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,18 +13,20 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Oop06b.ViewModels
+namespace De06B_Nhom02.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
         private CancellationTokenSource[] cts;
         private NodeType currentNodeType;
+        private bool isRunning = false;
         private Map map;
         private MapControlViewModel mapControl;
         private ObservableCollection<NotificationViewModel> notifications = new ObservableCollection<NotificationViewModel>();
         private int speed = 0;
         private int threadNo = 1;
         private int[] timeDelay = { 64, 32, 16, 8, 128, 256 };
+        private int counter;
 
         public MainWindowViewModel()
         {
@@ -37,17 +39,6 @@ namespace Oop06b.ViewModels
             FindPathCommand = new RelayCommand((param) => FindPath());
             RandomMapCommand = new RelayCommand((param) => RandomMap());
             CancelFindCommand = new RelayCommand((param) => CancelFind());
-        }
-
-        private void RandomMap()
-        {
-            foreach (var item in cts)
-            {
-                if (item != null)
-                    item.Cancel();
-            }
-            Notifications.Clear();
-            map.RandomGenerate(threadNo);
         }
 
         public ICommand CancelFindCommand { get; private set; }
@@ -66,6 +57,12 @@ namespace Oop06b.ViewModels
         }
 
         public ICommand FindPathCommand { get; private set; }
+
+        public bool IsRunning
+        {
+            get { return isRunning; }
+            set { isRunning = value; OnPropertyChanged("IsRunning"); }
+        }
 
         public MapControlViewModel MapControl
         {
@@ -111,30 +108,25 @@ namespace Oop06b.ViewModels
 
         private void CleanMap()
         {
-            foreach (var item in cts)
-            {
-                if (item != null)
-                    item.Cancel();
-            }
+            CancelFind();
             map.Clean();
             Notifications.Clear();
         }
 
         private async void FindPath()
         {
-            foreach (var item in cts)
-            {
-                if (item != null)
-                    item.Cancel();
-            }
+            IsRunning = true;
+            counter = 0;
+            CancelFind();
             Notifications.Clear();
-            await Task.Delay(100);
+            await Task.Delay(200);
             map.Clean();
             for (int i = 0; i < 5; i++)
             {
                 if (map.GetStart(i) != null || map.GetGoal(i) != null)
                 {
                     AStarAlgorithm item = new AStarAlgorithm(map, map.GetStart(i), map.GetGoal(i));
+                    counter++;
                     FindPath(item, i);
                 }
             }
@@ -149,6 +141,9 @@ namespace Oop06b.ViewModels
                 timer.Start();
                 var list = await aStar.Run(cts[i].Token);
                 timer.Stop();
+                counter--;
+                if (counter == 0)
+                    IsRunning = false;
                 if (list != null)
                 {
                     var noti = new NotificationViewModel(map.GetStart(i), map.GetGoal(i))
@@ -181,13 +176,20 @@ namespace Oop06b.ViewModels
             }
         }
 
-        private void ResetMap()
+        private void RandomMap()
         {
             foreach (var item in cts)
             {
                 if (item != null)
                     item.Cancel();
             }
+            Notifications.Clear();
+            map.RandomGenerate(threadNo);
+        }
+
+        private void ResetMap()
+        {
+            CancelFind();
             map.Clear();
             Notifications.Clear();
         }

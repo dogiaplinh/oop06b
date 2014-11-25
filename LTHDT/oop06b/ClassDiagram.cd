@@ -1,48 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Oop06b.MainWindow" Collapsed="true">
-    <Position X="8.25" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MainWindow.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Oop06b.Controls.NodeControl" Collapsed="true">
-    <Position X="8.25" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\NodeControl.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Oop06b.Controls.MapControl" Collapsed="true">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+  <Class Name="De06B_Nhom02.Controls.MapControl">
+    <Position X="6.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgACAACQAAAAAAEAAAAAAACBAAAAAAQQIAACIAAIAA=</HashCode>
       <FileName>Controls\MapControl.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.Controls.Notification" Collapsed="true">
-    <Position X="6.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controls\Notification.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Oop06b.Controls.PushPin" Collapsed="true">
-    <Position X="6.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>Controls\PushPin.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Oop06b.Helpers.PriorityQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="De06B_Nhom02.Helpers.PriorityQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAgAAAAAEAAAACAAAAAQAAACBAAAAAABBAABQCAA=</HashCode>
       <FileName>Helpers\PriorityQueue.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.Helpers.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="De06B_Nhom02.Helpers.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -50,93 +22,107 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Oop06b.Helpers.ModelBase" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Helpers\ModelBase.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Oop06b.Algorithm.AStarAlgorithm" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+  <Class Name="De06B_Nhom02.Algorithm.AStarAlgorithm">
+    <Position X="8.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAEAEAAAAAABAgAAAAAABAAAAAAABBAEAAAAAAAAI=</HashCode>
       <FileName>Algorithm\AStarAlgorithm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.Algorithm.HeuristicFunction" Collapsed="true">
+  <Class Name="De06B_Nhom02.Algorithm.HeuristicFunction" Collapsed="true">
     <Position X="4.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Algorithm\HeuristicFunction.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.Models.Map" Collapsed="true">
-    <Position X="2.5" Y="4.5" Width="1.5" />
+  <Class Name="De06B_Nhom02.Models.Map" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAABAgCAAQAAABAAAAAAAAAAIgYABAcAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Oop06b.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="2.5" Y="3.5" Width="1.5" />
+  <Class Name="De06B_Nhom02.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAABAAAAAAAAAAAAAAhAAAAIQBAAAAAYgA=</HashCode>
       <FileName>Models\Node.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.ViewModels.MainWindowViewModel" Collapsed="true">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+  <Class Name="De06B_Nhom02.ViewModels.MainWindowViewModel">
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAGCAAAAAoQgEAiQAAAAABEQAAgYEAIAAAAgACAAE=</HashCode>
       <FileName>ViewModels\MainWindowViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.ViewModels.MapControlViewModel" Collapsed="true">
+  <Class Name="De06B_Nhom02.ViewModels.MapControlViewModel" Collapsed="true">
     <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgEAAAAAAAAAAAAAAAAAABAAAAAAAQQAIAAAAAIAA=</HashCode>
       <FileName>ViewModels\MapControlViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.ViewModels.NodeControlViewModel" Collapsed="true">
+  <Class Name="De06B_Nhom02.ViewModels.NodeControlViewModel" Collapsed="true">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAIAAAADAgAAAIAAAAIAEQGAAAA=</HashCode>
       <FileName>ViewModels\NodeControlViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.ViewModels.NotificationViewModel" Collapsed="true">
+  <Class Name="De06B_Nhom02.ViewModels.NotificationViewModel" Collapsed="true">
     <Position X="2.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQABBAAAACAgABAAAAAQAAAAAEAAAABAAAAAACAAAQQ=</HashCode>
       <FileName>ViewModels\NotificationViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Oop06b.ViewModels.PushPinViewModel" Collapsed="true">
-    <Position X="2.5" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ViewModels\PushPinViewModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Oop06b.Algorithm.RuntimeData" Collapsed="true">
+  <Class Name="De06B_Nhom02.Algorithm.RuntimeData" Collapsed="true">
     <Position X="4.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAEAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Algorithm\RuntimeData.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="Oop06b.Models.Params" Collapsed="true">
+  <Class Name="De06B_Nhom02.Controls.NodeControl" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\NodeControl.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="De06B_Nhom02.Controls.Notification" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Notification.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="De06B_Nhom02.Controls.PushPin" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Controls\PushPin.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="De06B_Nhom02.Helpers.BindableBase" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\BindableBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="De06B_Nhom02.Models.Params" Collapsed="true">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAACAAEBA=</HashCode>
       <FileName>Models\Params.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Enum Name="Oop06b.Models.NodeType" Collapsed="true">
+  <Enum Name="De06B_Nhom02.Models.NodeType" Collapsed="true">
     <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AwAAAAAAACAAAAAAAAAAAAAAAAEIQAAAAAAAAAAAAAA=</HashCode>

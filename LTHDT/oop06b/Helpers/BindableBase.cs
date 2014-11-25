@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 
-namespace Oop06b.Helpers
+namespace De06B_Nhom02.Helpers
 {
-    public class BindableBase : INotifyPropertyChanged
+    public abstract class BindableBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

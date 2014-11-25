@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace Oop06b.Converters
+namespace De06B_Nhom02.Converters
 {
     public class BooleanToBrushConverter : IValueConverter
     {

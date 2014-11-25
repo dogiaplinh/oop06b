@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Oop06b.Controls
+namespace De06B_Nhom02.Controls
 {
     /// <summary>
     /// Interaction logic for Notification.xaml

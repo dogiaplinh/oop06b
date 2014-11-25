@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace Oop06b.Models
+namespace De06B_Nhom02.Models
 {
     /// <summary>
     /// Class chứa toàn bộ các thông số sử dụng trong project

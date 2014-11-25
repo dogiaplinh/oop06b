@@ -1,5 +1,5 @@
-﻿using Oop06b.Helpers;
-using Oop06b.Models;
+﻿using De06B_Nhom02.Helpers;
+using De06B_Nhom02.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Oop06b.ViewModels
+namespace De06B_Nhom02.ViewModels
 {
     public class NodeControlViewModel : BindableBase
     {

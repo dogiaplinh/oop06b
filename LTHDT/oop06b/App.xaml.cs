@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Oop06b
+namespace De06B_Nhom02
 {
     /// <summary>
     /// Interaction logic for App.xaml

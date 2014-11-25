@@ -1,6 +1,6 @@
-﻿using Oop06b.Helpers;
-using Oop06b.Models;
-using Oop06b.ViewModels;
+﻿using De06B_Nhom02.Helpers;
+using De06B_Nhom02.Models;
+using De06B_Nhom02.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace Oop06b.Controls
+namespace De06B_Nhom02.Controls
 {
     /// <summary>
     /// Interaction logic for CustomCanvas.xaml
@@ -51,7 +51,6 @@ namespace Oop06b.Controls
             List<Line> lines = new List<Line>();
             var start = nodes[0];
             var goal = nodes[nodes.Count - 1];
-            List<PushPinViewModel> list = new List<PushPinViewModel>();
             double center = -200 * Params.Scale / (1 - Params.Scale * 4);
             var scaleTransform = new ScaleTransform()
             {
