@@ -2,7 +2,7 @@
 using De06B_Nhom02.ViewModels;
 using System.Windows;
 
-namespace De06B_Nhom02
+namespace De06B_Nhom02.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

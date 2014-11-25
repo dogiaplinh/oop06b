@@ -4,7 +4,7 @@
         xmlns:converter="clr-namespace:De06B_Nhom02.Converters"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
-        x:Class="De06B_Nhom02.MainWindow"
+        x:Class="De06B_Nhom02.Views.MainWindow"
         Title="De06B-Nhom02"
         ResizeMode="CanMinimize"
         SizeToContent="WidthAndHeight">
