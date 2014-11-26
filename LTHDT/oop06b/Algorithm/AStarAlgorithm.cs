@@ -28,7 +28,7 @@ namespace De06B_Nhom02.Algorithm
             this.map = map;
             this.start = start;
             this.goal = goal;
-            createRuntimeData();
+            CreateRuntimeData();
             openSet = new PriorityQueue<Node>(Comparer<Node>.Create((x, y) => runtimeData[x].FScore.CompareTo(runtimeData[y].FScore)));
         }
 
@@ -45,7 +45,7 @@ namespace De06B_Nhom02.Algorithm
             return list;
         }
 
-        private void createRuntimeData()
+        private void CreateRuntimeData()
         {
             foreach (var item in map)
             {

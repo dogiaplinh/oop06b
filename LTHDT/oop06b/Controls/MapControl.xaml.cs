@@ -47,7 +47,7 @@ namespace De06B_Nhom02.Controls
 
         public void ConnectPath(List<Node> nodes, int index)
         {
-            Color color = Params.LineColor[index];
+            Color color = Params.LineColors[index];
             List<Line> lines = new List<Line>();
             var start = nodes[0];
             var goal = nodes[nodes.Count - 1];

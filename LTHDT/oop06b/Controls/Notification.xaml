@@ -8,9 +8,7 @@
              Width="200"
              mc:Ignorable="d"
              d:DesignHeight="100"
-             d:DesignWidth="300"
-             
-             Loaded="UserControl_Loaded">
+             d:DesignWidth="300">
     <UserControl.Resources>
         <Converters:BooleanToBrushConverter x:Key="BooleanToBrushConverter" />
         <Converters:BooleanToStatusConverter x:Key="BooleanToStatusConverter" />

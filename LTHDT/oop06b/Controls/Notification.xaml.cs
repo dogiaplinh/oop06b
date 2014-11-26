@@ -25,11 +25,5 @@ namespace De06B_Nhom02.Controls
         {
             InitializeComponent();
         }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            var storyboard = this.FindResource("ShowNoti") as Storyboard;
-            storyboard.Begin();
-        }
     }
 }

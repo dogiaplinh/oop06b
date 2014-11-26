@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace De06B_Nhom02.Models
 {
-    public class Map : BindableBase, IEnumerable<Node>
+    public class Map : IEnumerable<Node>
     {
         private Node[] goals;
         private List<Node> nodes = new List<Node>();
@@ -18,7 +18,7 @@ namespace De06B_Nhom02.Models
         {
             goals = new Node[5];
             starts = new Node[5];
-            CreateMap();
+            InitMap();
         }
 
         public Node this[int i, int j]
@@ -89,15 +89,15 @@ namespace De06B_Nhom02.Models
             for (int i = 0; i < number; i++)
             {
                 int b = list[random.Next(list.Count)];
-                SetStart(nodes[b], i);
+                SetStart(i, nodes[b]);
                 list.RemoveAt(b);
                 b = list[random.Next(list.Count)];
-                SetGoal(nodes[b], i);
+                SetGoal(i, nodes[b]);
                 list.RemoveAt(b);
             }
         }
 
-        public void SetGoal(Node node, int i)
+        public void SetGoal(int i, Node node)
         {
             if (goals[i] == null)
             {
@@ -113,7 +113,7 @@ namespace De06B_Nhom02.Models
             }
         }
 
-        public void SetStart(Node node, int i)
+        public void SetStart(int i, Node node)
         {
             if (starts[i] == null)
             {
@@ -134,7 +134,7 @@ namespace De06B_Nhom02.Models
             throw new NotImplementedException();
         }
 
-        private void CreateMap()
+        private void InitMap()
         {
             int a = (int)(1000 / Params.Scale / 300 / 2 * 4 / 3) - 1;
             for (int i = -a; i <= a; i++)

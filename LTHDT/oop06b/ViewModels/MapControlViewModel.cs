@@ -28,14 +28,14 @@ namespace De06B_Nhom02.ViewModels
             get { return nodes; }
         }
 
-        public void SetGoal(Node node, int i)
+        public void SetGoal(int i, Node node)
         {
-            map.SetGoal(node, i);
+            map.SetGoal(i, node);
         }
 
-        public void SetStart(Node node, int i)
+        public void SetStart(int i, Node node)
         {
-            map.SetStart(node, i);
+            map.SetStart(i, node);
         }
 
         private void SetView()

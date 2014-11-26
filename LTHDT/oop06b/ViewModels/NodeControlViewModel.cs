@@ -51,14 +51,14 @@ namespace De06B_Nhom02.ViewModels
         {
             int id = Convert.ToInt32(param);
             Node.Id = id;
-            MapControlViewModel.Instance.SetGoal(Node, id);
+            MapControlViewModel.Instance.SetGoal(id, Node);
         }
 
         private void SetStart(object param)
         {
             int id = Convert.ToInt32(param);
             Node.Id = id;
-            MapControlViewModel.Instance.SetStart(Node, id);
+            MapControlViewModel.Instance.SetStart(id, Node);
         }
     }
 }
