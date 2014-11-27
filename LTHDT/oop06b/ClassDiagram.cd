@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="De06B_Nhom02.Controls.MapControl">
+  <Class Name="De06B_Nhom02.Controls.MapControl" Collapsed="true">
     <Position X="4.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgACAACQAAAAAAEAAAAAAACBAAAAAAQQIAACIAAIAA=</HashCode>
@@ -22,7 +22,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="De06B_Nhom02.Algorithm.AStarAlgorithm">
+  <Class Name="De06B_Nhom02.Algorithm.AStarAlgorithm" Collapsed="true">
     <Position X="8.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAEAEAAAAAABAgAAAAAABAAAAAAABBAAAEAAAAAAI=</HashCode>
@@ -37,14 +37,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="De06B_Nhom02.Models.Map" Collapsed="true">
-    <Position X="4.75" Y="4.25" Width="1.5" />
+    <Position X="2.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAABAgCAAQAAABAABAAAAAAAIgYABAYAA=</HashCode>
       <FileName>Models\Map.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="De06B_Nhom02.Models.Node" BaseTypeListCollapsed="true">
+  <Class Name="De06B_Nhom02.Models.Node" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="6.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAABAAAAAAAAAAAAAAhAAAAIQBAAAAAYgA=</HashCode>
@@ -73,14 +73,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="De06B_Nhom02.ViewModels.NotificationViewModel" Collapsed="true">
-    <Position X="2.5" Y="5.5" Width="1.5" />
+    <Position X="2.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQABBAAAACAgABAAAAAQAAAAAEAAAABAAAAAACAAAQQ=</HashCode>
       <FileName>ViewModels\NotificationViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="De06B_Nhom02.Algorithm.RuntimeData" Collapsed="true">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+    <Position X="4.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAEAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Algorithm\RuntimeData.cs</FileName>

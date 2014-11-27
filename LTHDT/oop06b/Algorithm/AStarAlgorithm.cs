@@ -28,11 +28,11 @@ namespace De06B_Nhom02.Algorithm
             this.map = map;
             this.start = start;
             this.goal = goal;
-            CreateRuntimeData();
+            InitRuntimeData();
             openSet = new PriorityQueue<Node>(Comparer<Node>.Create((x, y) => runtimeData[x].FScore.CompareTo(runtimeData[y].FScore)));
         }
 
-        private List<Node> ReconstructPath(Node node)
+        private Task<List<Node>> ReconstructPath(Node node)
         {
             List<Node> list = new List<Node>();
             while (node != start)
@@ -42,10 +42,10 @@ namespace De06B_Nhom02.Algorithm
             }
             list.Add(node);
             list.Reverse();
-            return list;
+            return Task.FromResult<List<Node>>(list);
         }
 
-        private void CreateRuntimeData()
+        private void InitRuntimeData()
         {
             foreach (var item in map)
             {
@@ -80,7 +80,7 @@ namespace De06B_Nhom02.Algorithm
                 if (current == goal)
                 {
                     Distance = (int)runtimeData[current].FScore;
-                    return ReconstructPath(current);
+                    return await ReconstructPath(current);
                 }
                 closeSet.Add(current);
                 if (current != start)

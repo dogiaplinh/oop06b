@@ -76,7 +76,9 @@ namespace De06B_Nhom02.Models
         {
             Random random = new Random();
             Clear();
-            for (int i = 0; i < nodes.Count / 2; i++)
+            double r = random.NextDouble() * 0.3 + 0.3;
+            r *= nodes.Count;
+            for (int i = 0; i < r; i++)
             {
                 int a = random.Next(nodes.Count);
                 nodes[a].Type = NodeType.Obstacle;

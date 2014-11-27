@@ -45,7 +45,7 @@ namespace De06B_Nhom02.Controls
             SetView();
         }
 
-        public void ConnectPath(List<Node> nodes, int index)
+        public async void ConnectPath(List<Node> nodes, int index)
         {
             Color color = Params.LineColors[index];
             List<Line> lines = new List<Line>();

@@ -3,7 +3,7 @@
         xmlns:control="clr-namespace:De06B_Nhom02.Controls"
         xmlns:converter="clr-namespace:De06B_Nhom02.Converters"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
         x:Class="De06B_Nhom02.Views.MainWindow"
         Title="De06B-Nhom02"
         ResizeMode="CanMinimize"
@@ -738,7 +738,7 @@
         </StackPanel>
         <Grid Grid.Row="1"
               x:Name="MapLayout">
-            <control:MapControl Height="600"
+            <control:MapControl Height="560"
                                 Width="1000"
                                 DataContext="{Binding MapControl}"
                                 Loaded="MapControl_Loaded" />

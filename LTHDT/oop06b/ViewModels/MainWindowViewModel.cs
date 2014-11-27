@@ -115,7 +115,6 @@ namespace De06B_Nhom02.ViewModels
 
         private async void FindPath()
         {
-            IsRunning = true;
             counter = 0;
             CancelFind();
             Notifications.Clear();
@@ -125,14 +124,15 @@ namespace De06B_Nhom02.ViewModels
             {
                 if (map.GetStart(i) != null || map.GetGoal(i) != null)
                 {
+                    IsRunning = true;
                     AStarAlgorithm item = new AStarAlgorithm(map, map.GetStart(i), map.GetGoal(i));
                     counter++;
-                    FindPath(item, i);
+                    FindPathAsync(item, i);
                 }
             }
         }
 
-        private async void FindPath(AStarAlgorithm aStar, int i)
+        private async Task FindPathAsync(AStarAlgorithm aStar, int i)
         {
             cts[i] = new CancellationTokenSource();
             Stopwatch timer = new Stopwatch();

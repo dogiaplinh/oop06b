@@ -18,7 +18,7 @@ namespace De06B_Nhom02.ViewModels
         {
             Instance = this;
             this.map = map;
-            SetView();
+            InitView();
         }
 
         public static MapControlViewModel Instance { get; private set; }
@@ -38,7 +38,7 @@ namespace De06B_Nhom02.ViewModels
             map.SetStart(i, node);
         }
 
-        private void SetView()
+        private void InitView()
         {
             foreach (var item in map)
             {
